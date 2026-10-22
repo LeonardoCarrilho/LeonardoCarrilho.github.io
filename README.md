@@ -9,6 +9,7 @@ Portfólio pessoal de **Leonardo Fernandes Carrilho**, desenvolvedor full stack 
 ![React](https://img.shields.io/badge/React-19-61dafb?logo=react&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-8-646cff?logo=vite&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952b3?logo=bootstrap&logoColor=white)
+![CI](https://github.com/LeonardoCarrilho/LeonardoCarrilho.github.io/actions/workflows/ci.yml/badge.svg)
 
 ## Sobre o projeto
 
