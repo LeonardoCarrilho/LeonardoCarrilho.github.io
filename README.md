@@ -13,7 +13,7 @@ Portfólio pessoal de **Leonardo Fernandes Carrilho**, desenvolvedor full stack 
 
 ## Sobre o projeto
 
-O site reúne minha trajetória, stack, formação, serviços e os três projetos em destaque. A proposta é ser direto para recrutadores: nenhuma seção decorativa sem informação, links que abrem de verdade e a mesma experiência em desktop e celular.
+O site reúne minha trajetória, stack, formação, serviços e os oito projetos em destaque, do HTML puro ao full stack. A proposta é ser direto para recrutadores: nenhuma seção decorativa sem informação, links que abrem de verdade e a mesma experiência em desktop e celular.
 
 ### Destaques
 
@@ -97,9 +97,14 @@ O resultado fica em `dist/`.
 
 | Projeto | Stack | Demo |
 | --- | --- | --- |
-| [Dashboard de Vendas](https://github.com/LeonardoCarrilho/dashboard-vendas) | React, Vite, Recharts | [Abrir demo](https://leonardocarrilho.github.io/dashboard-vendas/) |
+| [Calculadora Trabalhista](https://github.com/LeonardoCarrilho/calculadora-trabalhista) | HTML, CSS, JavaScript | [Abrir demo](https://leonardocarrilho.github.io/calculadora-trabalhista/) |
+| [Câmbio Hoje](https://github.com/LeonardoCarrilho/conversor-de-moedas) | HTML, CSS, JavaScript | [Abrir demo](https://leonardocarrilho.github.io/conversor-de-moedas/) |
 | [Norte Store](https://github.com/LeonardoCarrilho/loja-virtual) | React, Vite, localStorage | [Abrir demo](https://leonardocarrilho.github.io/loja-virtual/) |
+| [Dashboard de Vendas](https://github.com/LeonardoCarrilho/dashboard-vendas) | React, Vite, Recharts | [Abrir demo](https://leonardocarrilho.github.io/dashboard-vendas/) |
+| [Painel Clima](https://github.com/LeonardoCarrilho/painel-clima) | React, Vite, Open-Meteo | [Abrir demo](https://leonardocarrilho.github.io/painel-clima/) |
 | [API de Tarefas](https://github.com/LeonardoCarrilho/api-tarefas) | Node.js, Express, MongoDB | [Código e documentação](https://github.com/LeonardoCarrilho/api-tarefas) |
+| [API de Finanças](https://github.com/LeonardoCarrilho/api-financas) | Node.js, Express, MySQL, JWT | [Código e documentação](https://github.com/LeonardoCarrilho/api-financas) |
+| [Helpdesk Full Stack](https://github.com/LeonardoCarrilho/helpdesk-fullstack) | React, Node.js, MySQL, JWT | [Abrir demo](https://leonardocarrilho.github.io/helpdesk-fullstack/) |
 
 ## Deploy
 

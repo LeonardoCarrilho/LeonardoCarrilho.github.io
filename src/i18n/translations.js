@@ -170,17 +170,23 @@ export const translations = {
     projects: {
       eyebrow: "Portfólio",
       title: "Projetos em destaque",
-      text: "Aplicações completas para praticar o ciclo inteiro: interface, estado, API e dados. O código de cada uma está aberto no GitHub.",
+      text: "Oito aplicações publicadas, do HTML puro ao full stack com API, banco de dados e autenticação. O código de cada uma está aberto no GitHub.",
       all: "Ver todos no GitHub",
       open: "Ver repositório",
       demo: "Abrir demo",
       status: "Código aberto",
       items: {
-        "dashboard-vendas": {
-          kind: "Dashboard",
-          title: "Dashboard de Vendas",
-          text: "Painel comercial com indicadores, receita x meta, canais de venda e tabela de pedidos.",
-          highlights: ["Filtro de 6 ou 12 meses", "Gráficos de área e rosca", "Exportação em CSV"],
+        "calculadora-trabalhista": {
+          kind: "Fundamentos",
+          title: "Calculadora Trabalhista",
+          text: "Simulador de salário líquido CLT com INSS, IRRF, FGTS, 13º e férias, sem framework e sem build.",
+          highlights: ["Tabelas de INSS e IRRF", "Memória de cálculo", "23 testes automatizados"],
+        },
+        "conversor-de-moedas": {
+          kind: "Fundamentos",
+          title: "Câmbio Hoje",
+          text: "Conversor de moedas com cotação ao vivo, pares cruzados, cache offline e histórico local.",
+          highlights: ["Cotação em tempo real", "Cache de 15 minutos", "Histórico de conversões"],
         },
         "loja-virtual": {
           kind: "E-commerce",
@@ -188,11 +194,35 @@ export const translations = {
           text: "Loja virtual com catálogo, busca, filtros, carrinho persistente e checkout de demonstração.",
           highlights: ["Carrinho com localStorage", "Frete grátis progressivo", "Checkout validado"],
         },
+        "dashboard-vendas": {
+          kind: "Dashboard",
+          title: "Dashboard de Vendas",
+          text: "Painel comercial com indicadores, receita x meta, canais de venda e tabela de pedidos.",
+          highlights: ["Filtro de 6 ou 12 meses", "Gráficos de área e rosca", "Exportação em CSV"],
+        },
+        "painel-clima": {
+          kind: "Dados externos",
+          title: "Painel Clima",
+          text: "Previsão atual, gráfico de 24 horas e 7 dias com Open-Meteo, favoritos e modo offline.",
+          highlights: ["API pública sem chave", "Cache de 30 minutos", "51 testes automatizados"],
+        },
         "api-tarefas": {
           kind: "API REST",
           title: "API de Tarefas",
           text: "API para gerenciamento de tarefas, com validação, filtros, paginação e estatísticas.",
           highlights: ["CRUD completo", "MongoDB + Mongoose", "Erros centralizados"],
+        },
+        "api-financas": {
+          kind: "API REST",
+          title: "API de Finanças",
+          text: "Contas, categorias e transações com JWT, valores em centavos, resumo mensal e exportação CSV.",
+          highlights: ["MySQL + repositório em memória", "JWT e senhas com scrypt", "32 testes automatizados"],
+        },
+        "helpdesk-fullstack": {
+          kind: "Full stack",
+          title: "Helpdesk Full Stack",
+          text: "Central de atendimento com SLA, comentários internos, RBAC e painel de indicadores.",
+          highlights: ["React + Node + MySQL", "Permissões por papel", "116 testes e demo online"],
         },
       },
     },
@@ -394,17 +424,23 @@ export const translations = {
     projects: {
       eyebrow: "Portfolio",
       title: "Featured projects",
-      text: "Complete applications built to practice the whole cycle: interface, state, API and data. The code for each one is open on GitHub.",
+      text: "Eight published applications, from plain HTML to a full-stack app with API, database and authentication. The code for each one is open on GitHub.",
       all: "See all on GitHub",
       open: "View repository",
       demo: "Live demo",
       status: "Open source",
       items: {
-        "dashboard-vendas": {
-          kind: "Dashboard",
-          title: "Sales Dashboard",
-          text: "A sales panel with KPIs, revenue vs. goal, sales channels and an orders table.",
-          highlights: ["6 or 12-month filter", "Area and donut charts", "CSV export"],
+        "calculadora-trabalhista": {
+          kind: "Fundamentals",
+          title: "Payroll Calculator",
+          text: "A Brazilian net-salary simulator with INSS, income tax, FGTS, 13th salary and vacation pay — no framework, no build step.",
+          highlights: ["INSS and income tax tables", "Step-by-step breakdown", "23 automated tests"],
+        },
+        "conversor-de-moedas": {
+          kind: "Fundamentals",
+          title: "Currency Converter",
+          text: "A currency converter with live rates, cross pairs, offline cache and local conversion history.",
+          highlights: ["Live exchange rates", "15-minute cache", "Conversion history"],
         },
         "loja-virtual": {
           kind: "E-commerce",
@@ -412,11 +448,35 @@ export const translations = {
           text: "An online store with catalog, search, filters, a persistent cart and demo checkout.",
           highlights: ["Cart with localStorage", "Progressive free shipping", "Validated checkout"],
         },
+        "dashboard-vendas": {
+          kind: "Dashboard",
+          title: "Sales Dashboard",
+          text: "A sales panel with KPIs, revenue vs. goal, sales channels and an orders table.",
+          highlights: ["6 or 12-month filter", "Area and donut charts", "CSV export"],
+        },
+        "painel-clima": {
+          kind: "External data",
+          title: "Weather Panel",
+          text: "Current conditions, a 24-hour chart and a 7-day forecast powered by Open-Meteo, with favorites and offline mode.",
+          highlights: ["Keyless public API", "30-minute cache", "51 automated tests"],
+        },
         "api-tarefas": {
           kind: "REST API",
           title: "Task API",
           text: "A task management API with validation, filters, pagination and statistics.",
           highlights: ["Full CRUD", "MongoDB + Mongoose", "Centralized error handling"],
+        },
+        "api-financas": {
+          kind: "REST API",
+          title: "Finance API",
+          text: "Accounts, categories and transactions with JWT, integer cents, monthly summary and CSV export.",
+          highlights: ["MySQL and in-memory repositories", "JWT and scrypt passwords", "32 automated tests"],
+        },
+        "helpdesk-fullstack": {
+          kind: "Full stack",
+          title: "Helpdesk Full Stack",
+          text: "A support desk with SLAs, internal notes, role-based access and an analytics dashboard.",
+          highlights: ["React + Node + MySQL", "Role-based permissions", "116 tests and a live demo"],
         },
       },
     },

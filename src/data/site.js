@@ -21,14 +21,21 @@ export const site = {
   cv: `${base}curriculo.pdf`,
   // Foto real em public/foto-perfil.png
   photo: `${base}foto-perfil.png`,
-  // Repositórios publicados no GitHub
+  // Repositórios publicados no GitHub, do fundamental ao avançado
   projects: [
     {
-      id: "dashboard-vendas",
-      repo: "https://github.com/LeonardoCarrilho/dashboard-vendas",
-      demo: "https://leonardocarrilho.github.io/dashboard-vendas/",
-      icon: "bi-bar-chart-line",
-      tech: ["React", "Vite", "Recharts"],
+      id: "calculadora-trabalhista",
+      repo: "https://github.com/LeonardoCarrilho/calculadora-trabalhista",
+      demo: "https://leonardocarrilho.github.io/calculadora-trabalhista/",
+      icon: "bi-calculator",
+      tech: ["HTML", "CSS", "JavaScript"],
+    },
+    {
+      id: "conversor-de-moedas",
+      repo: "https://github.com/LeonardoCarrilho/conversor-de-moedas",
+      demo: "https://leonardocarrilho.github.io/conversor-de-moedas/",
+      icon: "bi-currency-exchange",
+      tech: ["HTML", "CSS", "JavaScript"],
     },
     {
       id: "loja-virtual",
@@ -38,10 +45,37 @@ export const site = {
       tech: ["React", "Vite", "localStorage"],
     },
     {
+      id: "dashboard-vendas",
+      repo: "https://github.com/LeonardoCarrilho/dashboard-vendas",
+      demo: "https://leonardocarrilho.github.io/dashboard-vendas/",
+      icon: "bi-bar-chart-line",
+      tech: ["React", "Vite", "Recharts"],
+    },
+    {
+      id: "painel-clima",
+      repo: "https://github.com/LeonardoCarrilho/painel-clima",
+      demo: "https://leonardocarrilho.github.io/painel-clima/",
+      icon: "bi-cloud-sun",
+      tech: ["React", "Vite", "Open-Meteo"],
+    },
+    {
       id: "api-tarefas",
       repo: "https://github.com/LeonardoCarrilho/api-tarefas",
       icon: "bi-braces",
       tech: ["Node.js", "Express", "MongoDB"],
+    },
+    {
+      id: "api-financas",
+      repo: "https://github.com/LeonardoCarrilho/api-financas",
+      icon: "bi-wallet2",
+      tech: ["Node.js", "Express", "MySQL", "JWT"],
+    },
+    {
+      id: "helpdesk-fullstack",
+      repo: "https://github.com/LeonardoCarrilho/helpdesk-fullstack",
+      demo: "https://leonardocarrilho.github.io/helpdesk-fullstack/",
+      icon: "bi-headset",
+      tech: ["React", "Node.js", "MySQL", "JWT"],
     },
   ],
 };
