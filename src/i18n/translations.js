@@ -227,10 +227,10 @@ export const translations = {
       },
     },
     cta: {
-      title: "Procurando alguém para crescer junto?",
-      text: "Estou disponível para oportunidades júnior, estágio ou projetos em que eu possa contribuir desde o primeiro dia e evoluir rápido.",
+      title: "Vamos construir o próximo projeto?",
+      text: "Busco oportunidades em desenvolvimento full stack. Se você precisa de alguém para transformar ideias em interfaces e aplicações, vamos conversar.",
       button: "Falar comigo",
-      note: "Respondo em até 24h em dias úteis.",
+      note: "Disponível para conversar sobre oportunidades.",
     },
     contact: {
       eyebrow: "Contato",
@@ -481,10 +481,10 @@ export const translations = {
       },
     },
     cta: {
-      title: "Looking for someone to grow with?",
-      text: "I'm available for junior roles, internships or projects where I can contribute from day one and evolve fast.",
+      title: "Let’s build the next project.",
+      text: "I'm looking for opportunities in full stack development. If you need someone to turn ideas into interfaces and applications, let's talk.",
       button: "Get in touch",
-      note: "I reply within 24h on business days.",
+      note: "Open to conversations about opportunities.",
     },
     contact: {
       eyebrow: "Contact",
