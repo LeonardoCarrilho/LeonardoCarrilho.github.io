@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { initials, site } from "../data/site";
 import { useLanguage } from "../i18n/LanguageContext";
 
 const SECTION_IDS = ["about", "skills", "services", "education", "projects", "contact"];
 
 export default function Navbar() {
+  const toggleRef = useRef(null);
   const { lang, setLang, t } = useLanguage();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -39,7 +40,7 @@ export default function Navbar() {
   useEffect(() => {
     if (!open) return undefined;
     const onKeyDown = (event) => {
-      if (event.key === "Escape") setOpen(false);
+      if (event.key === "Escape") { setOpen(false); toggleRef.current?.focus(); }
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
@@ -49,7 +50,7 @@ export default function Navbar() {
 
   return (
     <header className={`site-nav ${scrolled ? "is-scrolled" : ""}`}>
-      <nav className="navbar container navbar-expand-lg" aria-label="Navegação principal">
+      <nav className="navbar container navbar-expand-lg" aria-label={lang === "pt" ? "Navegação principal" : "Main navigation"}>
         <a className="navbar-brand" href="#top" onClick={closeMenu}>
           <span className="brand-mark" aria-hidden="true">
             {initials}
@@ -79,10 +80,11 @@ export default function Navbar() {
 
           <button
             type="button"
+            ref={toggleRef}
             className="nav-toggle d-lg-none"
             aria-expanded={open}
             aria-controls="main-menu"
-            aria-label={open ? "Fechar menu" : "Abrir menu"}
+            aria-label={lang === "pt" ? (open ? "Fechar menu" : "Abrir menu") : (open ? "Close menu" : "Open menu")}
             onClick={() => setOpen((value) => !value)}
           >
             <i className={`bi ${open ? "bi-x-lg" : "bi-list"}`} aria-hidden="true" />
@@ -95,6 +97,7 @@ export default function Navbar() {
               <li className="nav-item" key={id}>
                 <a
                   className={`nav-link ${active === id ? "is-active" : ""}`}
+                  aria-current={active === id ? "location" : undefined}
                   href={`#${id}`}
                   onClick={closeMenu}
                 >
