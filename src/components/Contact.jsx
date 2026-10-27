@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { site, whatsappLink } from "../data/site";
 import { useLanguage } from "../i18n/LanguageContext";
 import Reveal from "./Reveal";
@@ -19,6 +19,7 @@ export default function Contact() {
   const [copied, setCopied] = useState(false);
   const [status, setStatus] = useState("");
   const timeoutRef = useRef(null);
+  useEffect(() => () => window.clearTimeout(timeoutRef.current), []);
 
   const copyEmail = async () => {
     try {

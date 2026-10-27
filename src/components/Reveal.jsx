@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
  */
 export default function Reveal({ children, className = "", delay = 0, as: Tag = "div" }) {
   const ref = useRef(null);
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const element = ref.current;
@@ -18,6 +18,8 @@ export default function Reveal({ children, className = "", delay = 0, as: Tag = 
       return undefined;
     }
 
+    if (element.getBoundingClientRect().top > window.innerHeight) setVisible(false);
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -25,7 +27,7 @@ export default function Reveal({ children, className = "", delay = 0, as: Tag = 
           observer.unobserve(element);
         }
       },
-      { threshold: 0.15, rootMargin: "0px 0px -60px 0px" },
+      { threshold: 0, rootMargin: "0px" },
     );
 
     observer.observe(element);
@@ -35,6 +37,7 @@ export default function Reveal({ children, className = "", delay = 0, as: Tag = 
   return (
     <Tag
       ref={ref}
+      onFocusCapture={() => setVisible(true)}
       className={`reveal ${visible ? "is-visible" : ""} ${className}`.trim()}
       style={{ transitionDelay: `${delay}ms` }}
     >

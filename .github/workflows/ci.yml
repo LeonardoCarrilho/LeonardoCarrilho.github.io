@@ -11,6 +11,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Checkout
@@ -25,8 +26,13 @@ jobs:
       - name: Instalar dependências
         run: npm ci
 
-      - name: Build
-        run: npm run build
+      - name: Testes unitários
+        run: npm test
+
+      - name: Testes de navegador
+        run: npm run test:e2e
+        env:
+          PLAYWRIGHT_CHANNEL: chrome
 
       - name: Publicar no GitHub Pages
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'

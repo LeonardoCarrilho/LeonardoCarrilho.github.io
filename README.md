@@ -123,3 +123,11 @@ Também funciona na Vercel ou Netlify com build `npm run build` e output `dist`.
 - [GitHub](https://github.com/LeonardoCarrilho)
 - [E-mail](mailto:leofernandescarrilho@gmail.com)
 - [Currículo](https://leonardocarrilho.github.io/curriculo.pdf)
+
+### Validação da interface
+
+- `npm test`: testes de persistência de idioma e categorias de projetos.
+- `npx playwright install chromium`: instala o navegador de teste.
+- `npm run test:e2e`: compila e valida filtros, idioma, armazenamento bloqueado, imagens, foco e responsividade.
+
+As prévias em `public/projects/` são capturas dos projetos publicados; atualize-as quando a interface de um projeto mudar.

@@ -1,15 +1,13 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { translations } from "./translations";
+import { readLanguage, saveLanguage } from "./storage.js";
 
 const LanguageContext = createContext(null);
-const STORAGE_KEY = "landing-language";
+
 
 function getInitialLanguage() {
   if (typeof window === "undefined") return "pt";
-  const saved = window.localStorage.getItem(STORAGE_KEY);
-  if (saved === "pt" || saved === "en") return saved;
-  // Idioma padrão do site: português. Troque para "en" se preferir.
-  return "pt";
+  try { return readLanguage(window.localStorage); } catch { return "pt"; }
 }
 
 export function LanguageProvider({ children }) {
@@ -23,7 +21,7 @@ export function LanguageProvider({ children }) {
     const description = document.querySelector('meta[name="description"]');
     if (description) description.setAttribute("content", dictionary.meta.description);
 
-    window.localStorage.setItem(STORAGE_KEY, lang);
+    try { saveLanguage(window.localStorage, lang); } catch { /* Storage can be disabled. */ }
   }, [lang]);
 
   const toggleLanguage = useCallback(() => {

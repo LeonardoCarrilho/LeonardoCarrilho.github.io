@@ -21,11 +21,11 @@ export default function App() {
       <Navbar />
       <main id="main-content">
         <Hero />
+        <Projects />
         <About />
         <Skills />
         <Services />
         <Education />
-        <Projects />
         <CtaBand />
         <Contact />
       </main>
@@ -33,3 +33,4 @@ export default function App() {
     </LanguageProvider>
   );
 }
+

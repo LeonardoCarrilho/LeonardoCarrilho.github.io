@@ -1,9 +1,14 @@
+import { useState } from "react";
+import { filterProjects } from "../utils/projects.js";
 import { site } from "../data/site";
 import { useLanguage } from "../i18n/LanguageContext";
 import Reveal from "./Reveal";
 
 export default function Projects() {
-  const { t } = useLanguage();
+  const { t, isPortuguese: pt } = useLanguage();
+  const [category, setCategory] = useState("all");
+  const projects = filterProjects(site.projects, category);
+  const filters = [["all", pt ? "Todos" : "All"], ["interface", pt ? "Interfaces" : "Interfaces"], ["api", "APIs"], ["fullstack", "Full Stack"]];
 
   return (
     <section className="section" id="projects">
@@ -23,15 +28,28 @@ export default function Projects() {
           </Reveal>
         </div>
 
+        <div className="project-toolbar">
+          <div className="project-filters" role="group" aria-label={pt ? "Filtrar projetos" : "Filter projects"}>
+            {filters.map(([id, label]) => <button type="button" key={id} aria-pressed={category === id} onClick={() => setCategory(id)}>{label}</button>)}
+          </div>
+          <span className="project-count" role="status">{projects.length} {pt ? "projetos" : "projects"}</span>
+        </div>
         <div className="row g-4">
-          {site.projects.map((project, index) => {
+          {projects.map((project, index) => {
             const copy = t.projects.items[project.id];
             const repoName = project.repo.replace(/^https?:\/\/github\.com\//, "");
 
             return (
-              <div className="col-md-6 col-lg-4" key={project.id}>
-                <Reveal delay={index * 80} className="h-100">
+              <div className="col-md-6" key={project.id}>
+                <Reveal delay={Math.min(index * 40, 160)} className="h-100">
                   <article className="project-card h-100">
+                    {project.demo ? (
+                      <a className="project-preview" href={project.demo} target="_blank" rel="noreferrer" aria-label={`${t.projects.demo}: ${copy.title}`}>
+                        <img src={`${import.meta.env.BASE_URL}projects/${project.id}.jpg`} alt={pt ? `Prévia de ${copy.title}` : `Preview of ${copy.title}`} width="1280" height="820" loading="lazy" decoding="async" />
+                      </a>
+                    ) : (
+                      <div className="project-code-art" aria-hidden="true"><i className="bi bi-braces" /><strong>{project.id === "api-tarefas" ? "tasks / REST" : "finance / REST"}</strong><span>{project.tech.join(" · ")}</span></div>
+                    )}
                     <div className="project-top">
                       <span className="project-icon" aria-hidden="true">
                         <i className={`bi ${project.icon}`} />

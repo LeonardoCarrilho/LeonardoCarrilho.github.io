@@ -1,163 +1,33 @@
 import { site } from "../data/site";
 import { useLanguage } from "../i18n/LanguageContext";
 import ProfilePhoto from "./ProfilePhoto";
-import Reveal from "./Reveal";
-
-function CodeLine({ indent = 0, children }) {
-  return (
-    <div className="code-line" style={{ paddingLeft: `${indent * 1.35}rem` }}>
-      {children}
-    </div>
-  );
-}
-
-function CodeWindow() {
-  const { t } = useLanguage();
-  const code = t.hero.code;
-
-  return (
-    <div className="code-wrap">
-      <div className="code-window">
-        <div className="code-head">
-          <span className="code-dots" aria-hidden="true">
-            <i />
-            <i />
-            <i />
-          </span>
-          <span className="code-file">
-            <i className="bi bi-filetype-js" aria-hidden="true" />
-            {code.file}
-          </span>
-        </div>
-
-        <div className="code-body" role="img" aria-label={t.hero.codeAria}>
-          <CodeLine>
-            <span className="tok-key">const</span> <span className="tok-var">dev</span>{" "}
-            <span className="tok-op">=</span> <span className="tok-punc">{"{"}</span>
-          </CodeLine>
-          <CodeLine indent={1}>
-            <span className="tok-prop">name</span>
-            <span className="tok-punc">:</span> <span className="tok-str">"{site.name}"</span>
-            <span className="tok-punc">,</span>
-          </CodeLine>
-          <CodeLine indent={1}>
-            <span className="tok-prop">role</span>
-            <span className="tok-punc">:</span> <span className="tok-str">"{code.role}"</span>
-            <span className="tok-punc">,</span>
-          </CodeLine>
-          <CodeLine indent={1}>
-            <span className="tok-prop">stack</span>
-            <span className="tok-punc">:</span> <span className="tok-punc">[</span>
-            <span className="tok-str">"React"</span>
-            <span className="tok-punc">,</span> <span className="tok-str">"Node.js"</span>
-            <span className="tok-punc">,</span> <span className="tok-str">"MongoDB"</span>
-            <span className="tok-punc">]</span>
-            <span className="tok-punc">,</span>
-          </CodeLine>
-          <CodeLine indent={1}>
-            <span className="tok-prop">focus</span>
-            <span className="tok-punc">:</span> <span className="tok-str">"{code.focus}"</span>
-            <span className="tok-punc">,</span>
-          </CodeLine>
-          <CodeLine indent={1}>
-            <span className="tok-prop">available</span>
-            <span className="tok-punc">:</span> <span className="tok-bool">true</span>
-            <span className="tok-punc">,</span>
-          </CodeLine>
-          <CodeLine>
-            <span className="tok-punc">{"};"}</span>
-          </CodeLine>
-        </div>
-      </div>
-
-      <div className="code-float">
-        <i className="bi bi-geo-alt" aria-hidden="true" />
-        {site.location}
-      </div>
-
-      <div className="code-badges">
-        {t.hero.codeBadges.map((badge, index) => (
-          <span className="chip" key={badge} style={{ animationDelay: `${index * 60}ms` }}>
-            {badge}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
 
 export default function Hero() {
-  const { t } = useLanguage();
-
+  const { t, isPortuguese: pt } = useLanguage();
   return (
-    <section className="hero" id="top">
-      <div className="hero-glow" aria-hidden="true" />
-      <div className="container position-relative">
-        <div className="row align-items-center g-5">
-          <div className="col-lg-6">
-            <Reveal>
-              <span className="badge-available">
-                <span className="pulse-dot" aria-hidden="true" />
-                {t.hero.badge}
-              </span>
-            </Reveal>
-
-            <Reveal delay={80}>
-              <div className="hero-kicker">
-                <ProfilePhoto className="hero-avatar" />
-                <p>
-                  {t.hero.greeting} <strong>{site.displayName}</strong>
-                  <span className="hero-role"> · {t.hero.role}</span>
-                </p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={140}>
-              <h1 className="hero-title">
-                {t.hero.title}{" "}
-                <span className="text-gradient">{t.hero.titleHighlight}</span>
-              </h1>
-            </Reveal>
-
-            <Reveal delay={200}>
-              <p className="hero-text">{t.hero.text}</p>
-            </Reveal>
-
-            <Reveal delay={260}>
-              <div className="hero-actions">
-                <a className="btn btn-brand" href="#contact">
-                  {t.hero.primary}
-                  <i className="bi bi-arrow-right" aria-hidden="true" />
-                </a>
-                <a className="btn btn-ghost" href="#skills">
-                  {t.hero.secondary}
-                </a>
-                <a className="resume-link" href={site.cv} target="_blank" rel="noreferrer">
-                  <i className="bi bi-download" aria-hidden="true" />
-                  {t.hero.resume}
-                </a>
-              </div>
-            </Reveal>
-
-            <Reveal delay={320}>
-              <dl className="hero-stats">
-                {t.hero.stats.map((stat) => (
-                  <div className="hero-stat" key={stat.value}>
-                    <dt>{stat.value}</dt>
-                    <dd>{stat.label}</dd>
-                  </div>
-                ))}
-              </dl>
-            </Reveal>
+    <section className="intro" id="top" aria-labelledby="intro-title">
+      <div className="container intro-layout">
+        <div className="intro-copy">
+          <span className="intro-status"><span className="pulse-dot" aria-hidden="true" />{t.hero.badge}</span>
+          <p className="intro-name">{site.displayName} <span>/ Full Stack</span></p>
+          <h1 id="intro-title">{pt ? "Ideias claras." : "Clear ideas."}<br /><span>{pt ? "Código que resolve." : "Code that delivers."}</span></h1>
+          <p className="intro-description">{pt ? "Desenvolvo interfaces, APIs e aplicações completas com React e Node.js. Atenção aos detalhes, curiosidade para aprender e foco em quem vai usar." : "I build interfaces, APIs and complete applications with React and Node.js. Attention to detail, curiosity to learn and a focus on the people who use them."}</p>
+          <div className="intro-actions">
+            <a className="intro-primary" href="#projects">{pt ? "Explorar projetos" : "Explore projects"}<i className="bi bi-arrow-down-right" aria-hidden="true" /></a>
+            <a className="intro-secondary" href={site.cv} target="_blank" rel="noreferrer">{t.hero.resume}<i className="bi bi-arrow-up-right" aria-hidden="true" /></a>
           </div>
-
-          <div className="col-lg-6">
-            <Reveal delay={180} className="d-flex justify-content-lg-end">
-              <CodeWindow />
-            </Reveal>
-          </div>
+          <div className="intro-person"><ProfilePhoto className="intro-avatar" alt="Leonardo Carrilho" /><span>{t.hero.role}<small>{site.location}</small></span></div>
+        </div>
+        <div className="intro-work">
+          <div className="work-caption"><span>{pt ? "EM FOCO / PROJETO 01" : "IN FOCUS / PROJECT 01"}</span><span>React · Recharts</span></div>
+          <a className="work-preview" href="https://leonardocarrilho.github.io/dashboard-vendas/" target="_blank" rel="noreferrer" aria-label={pt ? "Abrir demonstração do Dashboard de Vendas" : "Open Sales Dashboard demo"}>
+            <img src={`${import.meta.env.BASE_URL}projects/dashboard-vendas.jpg`} alt={pt ? "Dashboard de Vendas com indicadores e gráficos" : "Sales Dashboard with metrics and charts"} width="1280" height="820" fetchPriority="high" />
+            <span className="work-preview-link">{pt ? "Ver projeto ao vivo" : "View live project"} <i className="bi bi-arrow-up-right" aria-hidden="true" /></span>
+          </a>
+          <div className="work-note"><span className="work-note-number">{String(site.projects.length).padStart(2, "0")}</span><span>{pt ? "projetos para explorar" : "projects to explore"}<small>{pt ? "Da interface ao banco de dados." : "From interface to database."}</small></span><i className="bi bi-braces" aria-hidden="true" /></div>
         </div>
       </div>
+      <div className="container intro-stack" aria-label={pt ? "Tecnologias" : "Technologies"}><span>{pt ? "MINHA STACK" : "MY STACK"}</span>{["React", "JavaScript", "Node.js", "MySQL", "MongoDB", "Git"].map(item => <span key={item}>{item}</span>)}</div>
     </section>
   );
 }
