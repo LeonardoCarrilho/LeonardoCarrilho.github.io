@@ -59,9 +59,6 @@
 .profile-top { background: #e9f2ee; }
 .profile-card { border-color: var(--line); }
 .tag { background: #f2f6f4; border-color: #dce7e2; color: #395951; }
-.cta-band { background: #142c30; }
-.cta-band .section-title-sm, .cta-band p { color: #eff7f6; }
-.cta-band .btn-brand { background: #c5f17d; color: #142c30; }
 .cta-glow { display: none; }
 ::selection { background: #c5f17d; color: #142c30; }
 @media (max-width: 991.98px) {
@@ -83,3 +80,15 @@
  .project-filters button { padding: 9px 12px; }
 }
 @media print { .reveal { opacity: 1; transform: none; } .intro { background: #fff; color: #000; } }
+
+/* Contact invitation: a quiet, high-contrast continuation of the portfolio. */
+.cta-card { display:grid; grid-template-columns:64px minmax(0,1fr) auto; gap:28px; background:#edf4ee; color:#142c30; border:1px solid #cddbd1; border-radius:20px; box-shadow:none; padding:clamp(24px,4vw,48px); }
+.cta-symbol { display:grid; place-items:center; width:64px; height:64px; border-radius:50%; background:#c5f17d; color:#142c30; font-size:1.8rem; }
+.cta-content { max-width:39rem; }
+.cta-content h2 { color:#142c30; font-size:clamp(1.7rem,3vw,2.6rem); letter-spacing:-.045em; }
+.cta-content p { color:#475e57; }
+.cta-card .btn-light { background:#142c30; color:#fff; border-radius:10px; }
+.cta-card .btn-light:hover { background:#254a43; color:#fff; box-shadow:none; }
+.cta-note { color:#475e57; max-width:25ch; }
+@media(max-width:991px) { .cta-card { grid-template-columns:64px minmax(0,1fr); } .cta-action { grid-column:2; } }
+@media(max-width:575px) { .cta-card { grid-template-columns:minmax(0,1fr); gap:20px; } .cta-action { grid-column:1; } .cta-symbol { width:48px; height:48px; } }
