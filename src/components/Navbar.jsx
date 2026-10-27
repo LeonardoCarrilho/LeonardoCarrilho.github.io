@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { initials, site } from "../data/site";
 import { useLanguage } from "../i18n/LanguageContext";
 
-const SECTION_IDS = ["about", "skills", "services", "education", "projects", "contact"];
+const SECTION_IDS = ["projects", "about", "skills", "services", "education", "contact"];
 
 export default function Navbar() {
   const toggleRef = useRef(null);
