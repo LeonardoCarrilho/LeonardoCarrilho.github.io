@@ -11,6 +11,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Checkout
@@ -28,11 +29,10 @@ jobs:
       - name: Testes unitários
         run: npm test
 
-      - name: Instalar Chromium
-        run: npx playwright install --with-deps chromium
-
       - name: Testes de navegador
         run: npm run test:e2e
+        env:
+          PLAYWRIGHT_CHANNEL: chrome
 
       - name: Publicar no GitHub Pages
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
