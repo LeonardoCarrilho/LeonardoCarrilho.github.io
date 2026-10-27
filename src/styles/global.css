@@ -1865,3 +1865,20 @@ section[id] {
     transform: none;
   }
 }
+
+
+/* Portfólio editorial: títulos serifados e blocos de projeto definidos. */
+:root { --radius: 8px; --radius-lg: 10px; --font-display: Georgia, "Times New Roman", serif; }
+.hero { background: var(--bg-soft); border-bottom: 1px solid #d7c6b6; }
+.hero::before, .hero-glow { display: none; }
+.hero-title { font-weight: 400; font-size: clamp(2.7rem, 5vw, 4.8rem); line-height: 1.04; }
+.hero-title .text-gradient { background: none; -webkit-text-fill-color: var(--brand); color: var(--brand); font-style: italic; }
+.hero-stats { border-top: 1px solid #d7c6b6; padding-top: 24px; }
+.code-window { border-radius: 6px; box-shadow: 10px 10px 0 #e6dbcf; }
+.code-float { border-radius: 3px; }
+.section-title { font-weight: 400; }
+.project-card { border-radius: 6px; box-shadow: none; border-color: #d7c6b6; }
+.service-card { border-radius: 4px; box-shadow: none; }
+@media (max-width: 575.98px) {
+  .container > .row { --bs-gutter-x: 1.5rem; }
+}
