@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="intro-work">
           <div className="work-caption"><span>{pt ? "EM FOCO / PROJETO 01" : "IN FOCUS / PROJECT 01"}</span><span>React · Recharts</span></div>
           <a className="work-preview" href="https://leonardocarrilho.github.io/dashboard-vendas/" target="_blank" rel="noreferrer" aria-label={pt ? "Abrir demonstração do Dashboard de Vendas" : "Open Sales Dashboard demo"}>
-            <img src={`${import.meta.env.BASE_URL}projects/dashboard-vendas.jpg?v=20261027-modern`} alt={pt ? "Dashboard de Vendas com indicadores e gráficos" : "Sales Dashboard with metrics and charts"} width="1280" height="820" fetchPriority="high" />
+            <img src={`${import.meta.env.BASE_URL}projects/dashboard-vendas.jpg?v=20261028-design`} alt={pt ? "Dashboard de Vendas com indicadores e gráficos" : "Sales Dashboard with metrics and charts"} width="1280" height="820" fetchPriority="high" />
             <span className="work-preview-link">{pt ? "Ver projeto ao vivo" : "View live project"} <i className="bi bi-arrow-up-right" aria-hidden="true" /></span>
           </a>
           <div className="work-note"><span className="work-note-number">{String(site.projects.length).padStart(2, "0")}</span><span>{pt ? "projetos para explorar" : "projects to explore"}<small>{pt ? "Da interface ao banco de dados." : "From interface to database."}</small></span><i className="bi bi-braces" aria-hidden="true" /></div>

@@ -45,7 +45,7 @@ export default function Projects() {
                   <article className="project-card h-100">
                     {project.demo ? (
                       <a className="project-preview" href={project.demo} target="_blank" rel="noreferrer" aria-label={`${t.projects.demo}: ${copy.title}`}>
-                        <img src={`${import.meta.env.BASE_URL}projects/${project.id}.jpg?v=20261027-modern`} alt={pt ? `Prévia de ${copy.title}` : `Preview of ${copy.title}`} width="1280" height="820" loading="lazy" decoding="async" />
+                        <img src={`${import.meta.env.BASE_URL}projects/${project.id}.jpg?v=20261028-design`} alt={pt ? `Prévia de ${copy.title}` : `Preview of ${copy.title}`} width="1280" height="820" loading="lazy" decoding="async" />
                       </a>
                     ) : (
                       <div className="project-code-art" aria-hidden="true"><i className="bi bi-braces" /><strong>{project.id === "api-tarefas" ? "tasks / REST" : "finance / REST"}</strong><span>{project.tech.join(" · ")}</span></div>
