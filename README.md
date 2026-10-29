@@ -131,3 +131,9 @@ Também funciona na Vercel ou Netlify com build `npm run build` e output `dist`.
 - `npm run test:e2e`: compila e valida filtros, idioma, armazenamento bloqueado, imagens, foco e responsividade.
 
 As prévias em `public/projects/` são capturas dos projetos publicados; atualize-as quando a interface de um projeto mudar.
+
+## Contribuição e segurança
+
+Leia [AGENTS.md](AGENTS.md) antes de alterar o projeto. Toda tarefa exige issue e PR associado, com validação antes da publicação.
+
+Configuração de produção, observabilidade e limites da hospedagem: [docs/SECURITY.md](docs/SECURITY.md).
