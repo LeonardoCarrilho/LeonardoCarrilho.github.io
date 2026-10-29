@@ -10,8 +10,9 @@ const server = spawn(process.execPath, ["node_modules/vite/bin/vite.js", "previe
 let browser;
 try {
  let ready = false;
- for (let attempt = 0; attempt < 60; attempt++) {
-  try { if ((await fetch(base)).ok) { ready = true; break; } } catch {}
+ const startupDeadline = Date.now() + 60_000;
+ while (Date.now() < startupDeadline && server.exitCode === null) {
+  try { if ((await fetch(base, { signal: AbortSignal.timeout(1000) })).ok) { ready = true; break; } } catch {}
   await delay(100);
  }
  assert.ok(ready, "Preview server must start");

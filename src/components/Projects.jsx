@@ -34,7 +34,7 @@ export default function Projects() {
           </div>
           <span className="project-count" role="status">{projects.length} {pt ? "projetos" : "projects"}</span>
         </div>
-        <div className="row g-4">
+        <div className="projects-editorial">
           {projects.map((project, index) => {
             const copy = t.projects.items[project.id];
             const repoName = project.repo.replace(/^https?:\/\/github\.com\//, "");
@@ -45,7 +45,7 @@ export default function Projects() {
                   <article className="project-card h-100">
                     {project.demo ? (
                       <a className="project-preview" href={project.demo} target="_blank" rel="noreferrer" aria-label={`${t.projects.demo}: ${copy.title}`}>
-                        <img src={`${import.meta.env.BASE_URL}projects/${project.id}.jpg?v=20261028-design`} alt={pt ? `Prévia de ${copy.title}` : `Preview of ${copy.title}`} width="1280" height="820" loading="lazy" decoding="async" />
+                        <img src={`${import.meta.env.BASE_URL}projects/${project.id}.jpg?v=20261028-editorial`} alt={pt ? `Prévia de ${copy.title}` : `Preview of ${copy.title}`} width="1280" height="820" loading="lazy" decoding="async" />
                       </a>
                     ) : (
                       <div className="project-code-art" aria-hidden="true"><i className="bi bi-braces" /><strong>{project.id === "api-tarefas" ? "tasks / REST" : "finance / REST"}</strong><span>{project.tech.join(" · ")}</span></div>
