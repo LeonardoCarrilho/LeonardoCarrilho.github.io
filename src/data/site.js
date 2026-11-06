@@ -80,6 +80,12 @@ export const site = {
   ],
 };
 
+// Experiências profissionais podem ser adicionadas aqui quando estiverem disponíveis.
+export const experiences = [];
+
+const projectOrder = ["helpdesk-fullstack", "api-financas", "dashboard-vendas", "loja-virtual", "api-tarefas", "painel-clima", "calculadora-trabalhista", "conversor-de-moedas"];
+site.projects.sort((a, b) => projectOrder.indexOf(a.id) - projectOrder.indexOf(b.id));
+
 const nameParts = site.name.split(" ").filter(Boolean);
 export const initials =
   (nameParts[0]?.[0] ?? "") + (nameParts[nameParts.length - 1]?.[0] ?? "");
