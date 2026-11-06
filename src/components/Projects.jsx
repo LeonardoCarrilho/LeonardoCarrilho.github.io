@@ -48,7 +48,7 @@ export default function Projects() {
                         <img src={`${import.meta.env.BASE_URL}projects/${project.id}.jpg?v=20261027-modern`} alt={pt ? `Prévia de ${copy.title}` : `Preview of ${copy.title}`} width="1280" height="820" loading="lazy" decoding="async" />
                       </a>
                     ) : (
-                      <div className="project-code-art" aria-hidden="true"><i className="bi bi-braces" /><strong>{project.id === "api-tarefas" ? "tasks / REST" : "finance / REST"}</strong><span>{project.tech.join(" · ")}</span></div>
+                      <div className="project-code-art" aria-hidden="true"><i className="bi bi-braces" /><strong>{project.id === "sistema-compras" ? "compras / full stack" : project.id === "api-tarefas" ? "tasks / REST" : "finance / REST"}</strong><span>{project.tech.join(" · ")}</span></div>
                     )}
                     <div className="project-top">
                       <span className="project-icon" aria-hidden="true">

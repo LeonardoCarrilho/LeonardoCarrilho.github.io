@@ -170,12 +170,18 @@ export const translations = {
     projects: {
       eyebrow: "Portfólio",
       title: "Projetos em destaque",
-      text: "Oito aplicações publicadas, do HTML puro ao full stack com API, banco de dados e autenticação. O código de cada uma está aberto no GitHub.",
+      text: "Projetos de código aberto, do HTML puro ao full stack com API, banco de dados e autenticação. O código de cada uma está aberto no GitHub.",
       all: "Ver todos no GitHub",
       open: "Ver repositório",
       demo: "Abrir demo",
       status: "Código aberto",
       items: {
+        "sistema-compras": {
+          kind: "Full stack",
+          title: "Fluxo de Compras",
+          text: "Gestão de solicitações de compra, fornecedores, cotações e aprovação com histórico de decisões.",
+          highlights: ["Três perfis de acesso", "Cotações e aprovação", "Testes com MySQL real"],
+        },
         "calculadora-trabalhista": {
           kind: "Fundamentos",
           title: "Calculadora Trabalhista",
@@ -424,12 +430,18 @@ export const translations = {
     projects: {
       eyebrow: "Portfolio",
       title: "Featured projects",
-      text: "Eight published applications, from plain HTML to a full-stack app with API, database and authentication. The code for each one is open on GitHub.",
+      text: "Open-source projects, from plain HTML to full-stack applications with API, database and authentication. The code for each one is open on GitHub.",
       all: "See all on GitHub",
       open: "View repository",
       demo: "Live demo",
       status: "Open source",
       items: {
+        "sistema-compras": {
+          kind: "Full stack",
+          title: "Purchasing Workflow",
+          text: "Purchase requests, suppliers, quotes and approvals with a decision history.",
+          highlights: ["Three access roles", "Quotes and approvals", "Tests with MySQL"],
+        },
         "calculadora-trabalhista": {
           kind: "Fundamentals",
           title: "Payroll Calculator",
