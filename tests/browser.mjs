@@ -14,7 +14,7 @@ try {
  const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, reducedMotion: "reduce" });
  const errors = []; page.on("pageerror", e => errors.push(e.message));
  await page.goto(base);
- assert.equal(await page.locator("#projects article").count(), 6);
+ assert.equal(await page.locator("#projects article").count(), 7);
  assert.equal(await page.locator(".p-portrait img").count(), 0);
  for (const img of await page.locator(".p-project-visual img").all()) { await img.scrollIntoViewIfNeeded(); await img.evaluate(image => image.decode()); assert.ok(await img.evaluate(image => image.naturalWidth > 0)); }
  await page.getByRole("button", { name: "EN", exact: true }).click();
@@ -26,3 +26,4 @@ try {
  assert.deepEqual(errors, []);
  console.log("Browser checks passed: projects, images, language, navigation and responsive widths.");
 } finally { await browser?.close(); const exited = once(server, "exit"); server.kill(); await exited; }
+
