@@ -24,6 +24,12 @@ export const site = {
   // Repositórios publicados no GitHub, do fundamental ao avançado
   projects: [
     {
+      id: "sistema-compras",
+      repo: "https://github.com/LeonardoCarrilho/sistema-compras",
+      icon: "bi-cart-check",
+      tech: ["React", "Node.js", "MySQL", "JWT"],
+    },
+    {
       id: "calculadora-trabalhista",
       repo: "https://github.com/LeonardoCarrilho/calculadora-trabalhista",
       demo: "https://leonardocarrilho.github.io/calculadora-trabalhista/",

@@ -22,14 +22,15 @@ try {
  await page.goto(base);
  await page.locator("#intro-title").waitFor();
  assert.equal(await page.locator("#projects").count(), 1);
- assert.equal(await page.locator(".project-card").count(), 8);
+ assert.equal(await page.locator(".project-card").count(), 9);
  assert.deepEqual(await page.locator("[id]").evaluateAll(nodes => {
   const ids = nodes.map(node => node.id); return ids.filter((id, i) => ids.indexOf(id) !== i);
  }), [], "IDs must be unique");
  await page.getByRole("button", { name: "APIs", exact: true }).click();
  assert.equal(await page.locator(".project-card").count(), 2);
  await page.getByRole("button", { name: "Full Stack", exact: true }).click();
- assert.equal(await page.locator(".project-card").count(), 1);
+ assert.equal(await page.locator(".project-card").count(), 2);
+ assert.equal(await page.getByRole("link", { name: "Ver repositório: Fluxo de Compras" }).getAttribute("href"), "https://github.com/LeonardoCarrilho/sistema-compras");
  await page.getByRole("button", { name: "Interfaces", exact: true }).click();
  assert.equal(await page.locator(".project-card").count(), 5);
  await page.getByRole("button", { name: "Todos", exact: true }).click();
@@ -73,3 +74,4 @@ try {
  server.kill();
  await exited;
 }
+
