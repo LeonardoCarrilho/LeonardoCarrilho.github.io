@@ -11,3 +11,7 @@ dist-ssr
 coverage/
 playwright-report/
 test-results/
+
+# Local browser profiles
+.taste-skill/chrome*/
+.taste-skill/*.log
