@@ -1,11 +1,9 @@
 # Direção visual
 
-Portfólio editorial: contraste entre tipografia serifada e técnica, projetos com composições de estudos de caso, navegação discreta.
+O portfólio usa Hanken Grotesk, cinza claro e azul para destacar os projetos e os links. O hero apresenta desenvolvimento full stack ao lado de uma captura real do Helpdesk. As demais seções mantêm experiência, formação, tecnologias e contatos do proprietário em português e inglês.
 
-A direção escolhida é autoral e editorial: tipografia marcante, composições assimétricas e identidade própria para este projeto. Preserve a relação entre o conteúdo e sua apresentação ao criar novas telas.
+`src/styles/portfolio.css` contém o sistema visual ativo. As folhas antigas permanecem no histórico do projeto, mas não são importadas junto ao novo sistema. Preserve a mesma largura de conteúdo, controles com pelo menos 44 px, foco visível e fotografias/capturas sem distorção. O conteúdo deve crescer no celular.
 
-A camada editorial.css complementa os estilos funcionais e é carregada por último. Use as cores, espaçamentos e tipos definidos nela; evite introduzir estilos de outro projeto sem uma razão de uso.
+O movimento de entrada e o momento de texto usam cópias sem alteração do kit design-taste-frontend em `public/taste`. O carregamento usa arquivos locais, mantendo a CSP sem scripts inline. Preferência de movimento reduzido deve deixar todo o conteúdo visível.
 
-Antes de enviar mudanças visuais, confira desktop e celular com capturas reais, incluindo as seções abaixo da primeira dobra. Valide larguras de 320, 390, 768 e 1440 px, foco visível, teclado, contraste, formulários e preferência por movimento reduzido. Preserve o tema escuro quando disponível.
-
-Mudanças visuais seguem o mesmo fluxo: issue, branch, testes, commit e PR com referência à issue. Deploy depende dos checks e da integração do PR.
+Antes de publicar, execute lint, cobertura, build e os testes Playwright, incluindo PT/EN e larguras 320, 390, 768, 820, 1024 e 1440. Capturas e limitações do gate ficam em `.taste-skill`. O trabalho continua no PR #6 e na issue #8; não foi publicado.
