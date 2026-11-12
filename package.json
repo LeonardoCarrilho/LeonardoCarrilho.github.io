@@ -14,7 +14,7 @@
     "test:coverage": "c8 --reporter=lcov --reporter=text node --test tests/*.test.js"
   },
   "dependencies": {
-    "@sentry/browser": "^11.10.0",
+    "@sentry/browser": "^11.11.0",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.2",
     "react": "^19.3.1",
