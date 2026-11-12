@@ -1,0 +1,1400 @@
+{
+ "start": "2026-11-11T23:45:45.701Z",
+ "round": 3,
+ "idle": 0,
+ "errors": 0,
+ "status": "open",
+ "history": [
+  {
+   "at": "2026-11-12T00:20:41.124Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 35,
+   "round": 1,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-12T00:56:24.681Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 43,
+   "round": 2,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-12T01:01:18.451Z",
+   "mode": "manual",
+   "status": "open",
+   "fails": 34,
+   "round": 3,
+   "reused": false,
+   "stopHookActive": false
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": "dist/index.html",
+  "url": null,
+  "root": "dist",
+  "kind": "service",
+  "category": "Desenvolvedor full stack",
+  "primary": "Ver projetos",
+  "rounds": 3,
+  "start": "2026-11-11T23:45:45.701Z",
+  "by": "gate.mjs --start"
+ },
+ "manual": true,
+ "roundKey": "2e6774c18553f5a9:da39a3ee",
+ "roundFree": false,
+ "idleFree": false,
+ "blockKey": null,
+ "fp": "2e6774c18553f5a9",
+ "page": "dist/index.html",
+ "found": {
+  "fails": [
+   {
+    "check": "nav",
+    "where": "div.portfolio > header.p-header > div.wrap.p-wrap > a.p-logo \"LC. LEONARDO CARRILHO\"",
+    "msg": "nav link wraps to a second line",
+    "fix": "make the nav one bar from the content's left edge to its right edge, with every link and action inside it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "nav"
+    ],
+    "wheres": [
+     "div.portfolio > header.p-header > div.wrap.p-wrap > a.p-logo \"LC. LEONARDO CARRILHO\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#experience \"Experiência profissional.\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#experience \"Experiência profissional.\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#skills \"Da interface aos dados.\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#skills \"Da interface aos dados.\""
+    ]
+   },
+   {
+    "check": "text-only",
+    "where": "section#contact \"Vamos conversar?\"",
+    "msg": "the closing section is only text: no picture, icon, mock or effect in it",
+    "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "text-only"
+    ],
+    "wheres": [
+     "section#contact \"Vamos conversar?\""
+    ]
+   },
+   {
+    "check": "copy-headings",
+    "where": "div.wrap.p-wrap > div.p-section-heading > div > h2 \"Projetos que mostram como eu construo.\"",
+    "msg": "\"Projetos que mostram como eu construo.\" names no product, part, place or section (12 headings like it; at most one brand line per page) (and 11 more like it: \"Sistema de Gestão de RH\", \"Dashboard de Vendas\", \"Painel Clima\", \"Experiência profissional\", ...)",
+    "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "copy-headings"
+    ],
+    "wheres": [
+     "div.wrap.p-wrap > div.p-section-heading > div > h2 \"Projetos que mostram como eu construo.\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#projects \"01 / TRABALHOS SELECIONADOSProjetos que \"",
+    "msg": "the section is 3289px tall (3.7 screens), 1489px over two screens (1800px): every section after the hero is one screen or two, 2px either way (SR-2)",
+    "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height",
+     "screen-height"
+    ],
+    "wheres": [
+     "section#projects \"01 / TRABALHOS SELECIONADOSProjetos que \"",
+     "#projects section.p-section.p-projects \"01 / TRABALHOS SELECIONADOSProje\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "div#root > div.portfolio > footer.p-footer \"© 2026 LEONARDO CARRILHODesenvolvido por\"",
+    "msg": "the section is 93px tall (0.1 screens), 807px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+    "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "div#root > div.portfolio > footer.p-footer \"© 2026 LEONARDO CARRILHODesenvolvido por\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#contact \"05 / PRÓXIMO PASSOVamos conversar?Se voc\"",
+    "msg": "the section is 518px tall (0.6 screens), 382px short of one screen (900px): every section after the hero is one screen or two, 2px either way (and 1 more like it: \"03 / EXPERIÊNCIAExperiên\") (SR-2)",
+    "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height",
+     "screen-short",
+     "screen-height"
+    ],
+    "wheres": [
+     "section#contact \"05 / PRÓXIMO PASSOVamos conversar?Se voc\"",
+     "#contact section.p-contact \"05 / PRÓXIMO PASSOVamos conversa\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#about \"02 / SOBRE MIMCurioso por natureza. Dese\"",
+    "msg": "the section starts at 4189px, 311px above the screen grid (5 x 900px): sections start on whole screens (SR-2)",
+    "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height",
+     "screen-short",
+     "screen-height"
+    ],
+    "wheres": [
+     "section#about \"02 / SOBRE MIMCurioso por natureza. Dese\"",
+     "#about section.p-section.p-about \"02 / SOBRE MIMCurioso por nature\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#experience \"03 / EXPERIÊNCIAExperiência profissional\"",
+    "msg": "the section starts at 5089px, 311px above the screen grid (6 x 900px): sections start on whole screens (SR-2)",
+    "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height",
+     "screen-short",
+     "screen-height"
+    ],
+    "wheres": [
+     "section#experience \"03 / EXPERIÊNCIAExperiência profissional\"",
+     "#experience section.p-section.p-experience \"03 / EXPERIÊNCIAExperiência prof\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#skills \"04 / FERRAMENTAS & CONHECIMENTOSDa inter\"",
+    "msg": "the section starts at 5683px, 283px below the screen grid (6 x 900px): sections start on whole screens (and 3 more like it: \"05 / PRÓXIMO PASSOVamos \", \"© 2026 LEONARDO CARRILHO\", \"DESENVOLVEDOR FULL STACK\") (SR-2)",
+    "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "section#skills \"04 / FERRAMENTAS & CONHECIMENTOSDa inter\""
+    ]
+   },
+   {
+    "check": "section-air",
+    "where": "section#projects > div.wrap.p-wrap > a.p-all \"Ver todos os repositórios↗\"",
+    "msg": "a top border across 100% of the container, between the section's content: sections and their parts are told apart by air and ground, not lines (SR-3)",
+    "fix": "take the rule out: sections and their parts are parted by their ground and the air between them",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-air"
+    ],
+    "wheres": [
+     "section#projects > div.wrap.p-wrap > a.p-all \"Ver todos os repositórios↗\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "section#experience > div.wrap.p-wrap > div:nth-of-type(1) > h2 \"Experiência profissional.\"",
+    "msg": "the screen at scroll 4500px (stride 5) shows 311px of section 4 and the heading of section 4 whole and the content of 2 sections, over 24px each beside section 3: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+    "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section",
+     "neighbour"
+    ],
+    "wheres": [
+     "section#experience > div.wrap.p-wrap > div:nth-of-type(1) > h2 \"Experiência profissional.\"",
+     "#experience section.p-section.p-experience \"03 / EXPERIÊNCIAExperiência prof\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "div.wrap.p-wrap > div.p-section-heading > div > h2 \"Da interface aos dados.\"",
+    "msg": "the screen at scroll 5089px (the top of section 4) shows 306px of section 5 and the heading of section 5 whole and the content of 2 sections, over 24px each beside section 4: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+    "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section"
+    ],
+    "wheres": [
+     "div.wrap.p-wrap > div.p-section-heading > div > h2 \"Da interface aos dados.\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "section#skills \"04 / FERRAMENTAS & CONHECIMENTOSDa inter\"",
+    "msg": "the screen at scroll 6294px (the top of section 6) shows 289px of section 5 and the content of 3 sections, over 24px each beside section 6: a screen shows one section (another may peek 8px, 24px WARN) (and 3 more like it: scroll 5400px, scroll 80px, scroll 3600px) (SR-4)",
+    "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section"
+    ],
+    "wheres": [
+     "section#skills \"04 / FERRAMENTAS & CONHECIMENTOSDa inter\""
+    ]
+   },
+   {
+    "check": "one-heading",
+    "where": "section#experience > div.wrap.p-wrap > div:nth-of-type(1) > h2 \"Experiência profissional.\"",
+    "msg": "headings of two sections show whole on one screen at 5 of 126 scroll positions (4%; at scroll 4450, 4500, 5100, 5150px), here with \"Curioso por natureza. Desenvolve\": at most 3% on a desktop (SR-5)",
+    "fix": "make the sections one screen tall so their headings sit a screen apart and two never share one",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-heading"
+    ],
+    "wheres": [
+     "section#experience > div.wrap.p-wrap > div:nth-of-type(1) > h2 \"Experiência profissional.\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "div#root \"Ir para o conteúdoLC.LEONARDOCARRILHOPro\"",
+    "msg": "a <div> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+    "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "div#root \"Ir para o conteúdoLC.LEONARDOCARRILHOPro\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "section#top > div.wrap.p-wrap \"DESENVOLVEDOR FULL STACKDisponível para \"",
+    "msg": "the hero's .wrap holds 3 children, 0 of them .hero-text: one .hero-text and at most one strip (SR-6)",
+    "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "section#top > div.wrap.p-wrap \"DESENVOLVEDOR FULL STACKDisponível para \""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "article.p-project:nth-of-type(5) > div.p-project-info > div.p-project-meta > span \"React / Vite / localStorage\"",
+    "msg": "2 text blocks start on a left line at x 555, 475px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (also \"React / Vite / Open-Meteo\") (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "article.p-project:nth-of-type(5) > div.p-project-info > div.p-project-meta > span \"React / Vite / localStorage\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "article.p-project:nth-of-type(3) > div.p-project-info > div.p-project-meta > span \"Node.js / Express / MySQL / JWT\"",
+    "msg": "1 text block starts on a left line at x 513, 433px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "article.p-project:nth-of-type(3) > div.p-project-info > div.p-project-meta > span \"Node.js / Express / MySQL / JWT\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "article.p-project.p-rh > div.p-project-info > div.p-project-meta > span \"React / Node.js / Express / Tailwind CSS\"",
+    "msg": "1 text block starts on a left line at x 475, 395px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "article.p-project.p-rh > div.p-project-info > div.p-project-meta > span \"React / Node.js / Express / Tailwind CSS\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#skills h3 \"Front-end\"",
+    "msg": "starts at x 152; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#skills h3 \"Front-end\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#skills p \"React · JavaScript · HTML · CSS\"",
+    "msg": "starts at x 630.4; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#skills p \"React · JavaScript · HTML · CSS\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#skills h3 \"Back-end\"",
+    "msg": "starts at x 152; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#skills h3 \"Back-end\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#skills p \"Node.js · Express · APIs REST\"",
+    "msg": "starts at x 630.4; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#skills p \"Node.js · Express · APIs REST\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#skills h3 \"Dados / Data\"",
+    "msg": "starts at x 152; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#skills h3 \"Dados / Data\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#skills p \"MySQL · MongoDB · Mongoose\"",
+    "msg": "starts at x 630.4; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#skills p \"MySQL · MongoDB · Mongoose\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#skills h3 \"Ferramentas / Tools\"",
+    "msg": "starts at x 152; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#skills h3 \"Ferramentas / Tools\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#skills p \"Git · GitHub · Docker Compose · \"",
+    "msg": "starts at x 630.4; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#skills p \"Git · GitHub · Docker Compose · \""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "footer.p-footer span \"Desenvolvido por Leonardo Carril\"",
+    "msg": "starts at x 681.5; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "footer.p-footer span \"Desenvolvido por Leonardo Carril\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "footer.p-footer a \"↑ TOPO\"",
+    "msg": "starts at x 1316.8; the lines are 80 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "footer.p-footer a \"↑ TOPO\""
+    ]
+   },
+   {
+    "check": "screen-short",
+    "where": "#top section.p-hero.hero \"DESENVOLVEDOR FULL STACKDisponív\"",
+    "msg": "820px tall; one screen under the nav is 900px",
+    "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-short"
+    ],
+    "wheres": [
+     "#top section.p-hero.hero \"DESENVOLVEDOR FULL STACKDisponív\""
+    ]
+   },
+   {
+    "check": "hero-fold",
+    "where": "#top section.p-hero.hero \"DESENVOLVEDOR FULL STACKDisponív\"",
+    "msg": "starts at y 80, not under the nav",
+    "fix": "the hero fills the first screen alone, its button inside it",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "hero-fold"
+    ],
+    "wheres": [
+     "#top section.p-hero.hero \"DESENVOLVEDOR FULL STACKDisponív\""
+    ]
+   },
+   {
+    "check": "neighbour-ground",
+    "where": "#about section.p-section.p-about \"02 / SOBRE MIMCurioso por nature\"",
+    "msg": "framed, 57px of #experience section.p-section.p-experience \"03 / EXPERIÊNCIAExperiência prof\"'s ground shows",
+    "fix": "end the ground with the section",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "neighbour-ground"
+    ],
+    "wheres": [
+     "#about section.p-section.p-about \"02 / SOBRE MIMCurioso por nature\""
+    ]
+   }
+  ],
+  "warns": [
+   {
+    "check": "scroll-reveal",
+    "where": "section#about > div.wrap.p-wrap > div.p-about-copy > p.mo-wh__text \"Sou formado em Ciências da Computação e \"",
+    "msg": "starts \"color\" (0.2 s) the moment it is scrolled into view (an IntersectionObserver) on span.mo-w:nth-of-type(1) (inside a dealt moment's section, [data-moment]: an enter moment is expected on every kind; its still is judged under reduced motion)",
+    "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-buttons",
+    "where": "div#root > div.portfolio > a.p-skip \"Ir para o conteúdo\"",
+    "msg": "\"Ir para o conteúdo\" does not start with a verb (book, buy, try, start, get, see...) (and 2 more like it: \"Ver projetos ↘\", \"leofernandescarrilho@gma\")",
+    "fix": "label buttons with a verb and what the visitor gets (\"Book a room\", \"Start free trial\")",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-actions",
+    "where": "(the page)",
+    "msg": "the main action \"Ver projetos\" does not read word for word the same in the closing section",
+    "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "heading-scale",
+    "where": "article.p-project:nth-of-type(3) > div.p-project-visual > div.p-api-art > strong \"finance.api\"",
+    "msg": "1 line of plain text set larger than the section headings (68px against h2 57.6px)",
+    "fix": "size headings by level: the h1 largest, one size per level, each level below the one above",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#top / section#projects",
+    "msg": "152px between these sections, -49% against the median 296px of gaps at a change of ground",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#skills / section#contact",
+    "msg": "uneven space at the edge of a band: 206px outside its edge, 112px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-set",
+    "where": "div.p-project-grid > article.p-project:nth-of-type(6) > div.p-project-visual > img \"api-tarefas.jpg\"",
+    "msg": "6 photographs in more than one look: lightness from 0.15 to 0.96; saturation from 0.06 to 0.40; the odd one out is api-tarefas.jpg",
+    "fix": "grade the photographs to one look (light, colour, warmth), or replace the odd one out",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "header.p-header > div.wrap.p-wrap > nav > a:nth-of-type(3) \"Conhecimentos\"",
+    "msg": "\"Conhecimentos\" opens a section headed \"Da interface aos dados.\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "header.p-header > div.wrap.p-wrap > nav > a:nth-of-type(4) \"Contato\"",
+    "msg": "\"Contato\" opens a section headed \"Vamos conversar?\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-repeat",
+    "where": "div.p-project-grid > article.p-project.p-featured > div.p-project-visual > img \"helpdesk-fullstack.jpg\"",
+    "msg": "the photograph helpdesk-fullstack.jpg is shown 2 times on the page: a picture the visitor has already seen",
+    "fix": "show each photograph once: a different picture of what this section names, or none",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "grounds",
+    "where": "section#about \"02 / SOBRE MIM Curioso por natureza. Des\"",
+    "msg": "4 flat grounds across the page (#eef0f3 section x2, #fafafa section x2, #e2e5ea section, #1f2de6 section): three at most (the base, a surface, an inverse)",
+    "fix": "three flat grounds at most (the base, one surface, one inverse): lay the other bands on one of them",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "one-screen",
+    "where": "section#experience \"Experiência profissional.\"",
+    "msg": "1 section is shorter than the screen, so the next one's heading or picture shows with it: \"Experiência profissional.\" is 594px of the 900px under the nav, and \"Da interface aos dados.\" shows below it",
+    "fix": "give each section the screen (min-height: 100svh less the nav, its content centred), or join two short ones into one",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "skip-link",
+    "where": "div#root > div.portfolio > a.p-skip \"Ir para o conteúdo\"",
+    "msg": "the first Tab stop is \"Ir para o conteúdo\", not a skip link: a keyboard user tabs through the whole nav on every visit",
+    "fix": "add the starter's skip link as the header's first child: <a class=\"skip-link\" href=\"#top\">Skip to content</a>",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "share-meta",
+    "where": "head",
+    "msg": "the head lacks og:image, twitter:card: a shared link shows no picture or title of its own",
+    "fix": "copy the head block of starter.html: og tags, twitter:card, the icon and theme-color (references/system.md, Head)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "div.portfolio > header.p-header > div.wrap.p-wrap > a.p-logo \"LC.\"",
+    "msg": "a 39x42px tap target: under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390,
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "no-visual",
+    "where": "section#top \"Desenvolvimento full stack.\"",
+    "msg": "pictures, effects and mocks cover 22% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "heading-scale",
+    "where": "div.p-project-grid > article.p-project.p-rh > div.p-project-info > h3 \"Sistema de Gestão de RH\"",
+    "msg": "the h3s (28px) are only 1.29x smaller than the h2s (36px): one level a clear step (1.3x or more) below the other",
+    "fix": "size headings by level: the h1 largest, one size per level, each level below the one above",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "orphan",
+    "where": "div.wrap.p-wrap > div.p-experience-entry > div.p-experience-education > p \"Universidade São Judas Tadeu (USJT) · 06\"",
+    "msg": "its last line holds only \"06/2026\"",
+    "fix": "rebalance the text (text-wrap: pretty, or a shorter line) so the last line holds more than one short word",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-weight",
+    "where": "div.p-project-grid > article.p-project:nth-of-type(7) > div.p-project-visual > img \"painel-clima.jpg\"",
+    "msg": "5 photographs are 3x or more wider than drawn on the phone, with no srcset: painel-clima.jpg is 1440px (336 KB, lazy) for a 342px frame; on a phone it arrives late and its frame shows only its ground until then",
+    "fix": "give each photograph srcset and sizes (a 800px and a 1600px file), or a smaller file: the frame never shows empty",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   }
+  ],
+  "crashed": [],
+  "seconds": {
+   "consistency": 104,
+   "layout": 14
+  }
+ },
+ "open": [
+  {
+   "check": "nav",
+   "where": "div.portfolio > header.p-header > div.wrap.p-wrap > a.p-logo \"LC. LEONARDO CARRILHO\"",
+   "msg": "nav link wraps to a second line",
+   "fix": "make the nav one bar from the content's left edge to its right edge, with every link and action inside it",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "nav"
+   ],
+   "wheres": [
+    "div.portfolio > header.p-header > div.wrap.p-wrap > a.p-logo \"LC. LEONARDO CARRILHO\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#experience \"Experiência profissional.\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#experience \"Experiência profissional.\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#skills \"Da interface aos dados.\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#skills \"Da interface aos dados.\""
+   ]
+  },
+  {
+   "check": "text-only",
+   "where": "section#contact \"Vamos conversar?\"",
+   "msg": "the closing section is only text: no picture, icon, mock or effect in it",
+   "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "text-only"
+   ],
+   "wheres": [
+    "section#contact \"Vamos conversar?\""
+   ]
+  },
+  {
+   "check": "copy-headings",
+   "where": "div.wrap.p-wrap > div.p-section-heading > div > h2 \"Projetos que mostram como eu construo.\"",
+   "msg": "\"Projetos que mostram como eu construo.\" names no product, part, place or section (12 headings like it; at most one brand line per page) (and 11 more like it: \"Sistema de Gestão de RH\", \"Dashboard de Vendas\", \"Painel Clima\", \"Experiência profissional\", ...)",
+   "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "copy-headings"
+   ],
+   "wheres": [
+    "div.wrap.p-wrap > div.p-section-heading > div > h2 \"Projetos que mostram como eu construo.\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#projects \"01 / TRABALHOS SELECIONADOSProjetos que \"",
+   "msg": "the section is 3289px tall (3.7 screens), 1489px over two screens (1800px): every section after the hero is one screen or two, 2px either way (SR-2)",
+   "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height",
+    "screen-height"
+   ],
+   "wheres": [
+    "section#projects \"01 / TRABALHOS SELECIONADOSProjetos que \"",
+    "#projects section.p-section.p-projects \"01 / TRABALHOS SELECIONADOSProje\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "div#root > div.portfolio > footer.p-footer \"© 2026 LEONARDO CARRILHODesenvolvido por\"",
+   "msg": "the section is 93px tall (0.1 screens), 807px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+   "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "div#root > div.portfolio > footer.p-footer \"© 2026 LEONARDO CARRILHODesenvolvido por\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#contact \"05 / PRÓXIMO PASSOVamos conversar?Se voc\"",
+   "msg": "the section is 518px tall (0.6 screens), 382px short of one screen (900px): every section after the hero is one screen or two, 2px either way (and 1 more like it: \"03 / EXPERIÊNCIAExperiên\") (SR-2)",
+   "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height",
+    "screen-short",
+    "screen-height"
+   ],
+   "wheres": [
+    "section#contact \"05 / PRÓXIMO PASSOVamos conversar?Se voc\"",
+    "#contact section.p-contact \"05 / PRÓXIMO PASSOVamos conversa\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#about \"02 / SOBRE MIMCurioso por natureza. Dese\"",
+   "msg": "the section starts at 4189px, 311px above the screen grid (5 x 900px): sections start on whole screens (SR-2)",
+   "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height",
+    "screen-short",
+    "screen-height"
+   ],
+   "wheres": [
+    "section#about \"02 / SOBRE MIMCurioso por natureza. Dese\"",
+    "#about section.p-section.p-about \"02 / SOBRE MIMCurioso por nature\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#experience \"03 / EXPERIÊNCIAExperiência profissional\"",
+   "msg": "the section starts at 5089px, 311px above the screen grid (6 x 900px): sections start on whole screens (SR-2)",
+   "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height",
+    "screen-short",
+    "screen-height"
+   ],
+   "wheres": [
+    "section#experience \"03 / EXPERIÊNCIAExperiência profissional\"",
+    "#experience section.p-section.p-experience \"03 / EXPERIÊNCIAExperiência prof\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#skills \"04 / FERRAMENTAS & CONHECIMENTOSDa inter\"",
+   "msg": "the section starts at 5683px, 283px below the screen grid (6 x 900px): sections start on whole screens (and 3 more like it: \"05 / PRÓXIMO PASSOVamos \", \"© 2026 LEONARDO CARRILHO\", \"DESENVOLVEDOR FULL STACK\") (SR-2)",
+   "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "section#skills \"04 / FERRAMENTAS & CONHECIMENTOSDa inter\""
+   ]
+  },
+  {
+   "check": "section-air",
+   "where": "section#projects > div.wrap.p-wrap > a.p-all \"Ver todos os repositórios↗\"",
+   "msg": "a top border across 100% of the container, between the section's content: sections and their parts are told apart by air and ground, not lines (SR-3)",
+   "fix": "take the rule out: sections and their parts are parted by their ground and the air between them",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-air"
+   ],
+   "wheres": [
+    "section#projects > div.wrap.p-wrap > a.p-all \"Ver todos os repositórios↗\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "section#experience > div.wrap.p-wrap > div:nth-of-type(1) > h2 \"Experiência profissional.\"",
+   "msg": "the screen at scroll 4500px (stride 5) shows 311px of section 4 and the heading of section 4 whole and the content of 2 sections, over 24px each beside section 3: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+   "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section",
+    "neighbour"
+   ],
+   "wheres": [
+    "section#experience > div.wrap.p-wrap > div:nth-of-type(1) > h2 \"Experiência profissional.\"",
+    "#experience section.p-section.p-experience \"03 / EXPERIÊNCIAExperiência prof\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "div.wrap.p-wrap > div.p-section-heading > div > h2 \"Da interface aos dados.\"",
+   "msg": "the screen at scroll 5089px (the top of section 4) shows 306px of section 5 and the heading of section 5 whole and the content of 2 sections, over 24px each beside section 4: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+   "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section"
+   ],
+   "wheres": [
+    "div.wrap.p-wrap > div.p-section-heading > div > h2 \"Da interface aos dados.\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "section#skills \"04 / FERRAMENTAS & CONHECIMENTOSDa inter\"",
+   "msg": "the screen at scroll 6294px (the top of section 6) shows 289px of section 5 and the content of 3 sections, over 24px each beside section 6: a screen shows one section (another may peek 8px, 24px WARN) (and 3 more like it: scroll 5400px, scroll 80px, scroll 3600px) (SR-4)",
+   "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section"
+   ],
+   "wheres": [
+    "section#skills \"04 / FERRAMENTAS & CONHECIMENTOSDa inter\""
+   ]
+  },
+  {
+   "check": "one-heading",
+   "where": "section#experience > div.wrap.p-wrap > div:nth-of-type(1) > h2 \"Experiência profissional.\"",
+   "msg": "headings of two sections show whole on one screen at 5 of 126 scroll positions (4%; at scroll 4450, 4500, 5100, 5150px), here with \"Curioso por natureza. Desenvolve\": at most 3% on a desktop (SR-5)",
+   "fix": "make the sections one screen tall so their headings sit a screen apart and two never share one",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-heading"
+   ],
+   "wheres": [
+    "section#experience > div.wrap.p-wrap > div:nth-of-type(1) > h2 \"Experiência profissional.\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "div#root \"Ir para o conteúdoLC.LEONARDOCARRILHOPro\"",
+   "msg": "a <div> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+   "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "div#root \"Ir para o conteúdoLC.LEONARDOCARRILHOPro\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "section#top > div.wrap.p-wrap \"DESENVOLVEDOR FULL STACKDisponível para \"",
+   "msg": "the hero's .wrap holds 3 children, 0 of them .hero-text: one .hero-text and at most one strip (SR-6)",
+   "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "section#top > div.wrap.p-wrap \"DESENVOLVEDOR FULL STACKDisponível para \""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "article.p-project:nth-of-type(5) > div.p-project-info > div.p-project-meta > span \"React / Vite / localStorage\"",
+   "msg": "2 text blocks start on a left line at x 555, 475px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (also \"React / Vite / Open-Meteo\") (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "article.p-project:nth-of-type(5) > div.p-project-info > div.p-project-meta > span \"React / Vite / localStorage\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "article.p-project:nth-of-type(3) > div.p-project-info > div.p-project-meta > span \"Node.js / Express / MySQL / JWT\"",
+   "msg": "1 text block starts on a left line at x 513, 433px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "article.p-project:nth-of-type(3) > div.p-project-info > div.p-project-meta > span \"Node.js / Express / MySQL / JWT\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "article.p-project.p-rh > div.p-project-info > div.p-project-meta > span \"React / Node.js / Express / Tailwind CSS\"",
+   "msg": "1 text block starts on a left line at x 475, 395px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "article.p-project.p-rh > div.p-project-info > div.p-project-meta > span \"React / Node.js / Express / Tailwind CSS\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#skills h3 \"Front-end\"",
+   "msg": "starts at x 152; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#skills h3 \"Front-end\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#skills p \"React · JavaScript · HTML · CSS\"",
+   "msg": "starts at x 630.4; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#skills p \"React · JavaScript · HTML · CSS\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#skills h3 \"Back-end\"",
+   "msg": "starts at x 152; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#skills h3 \"Back-end\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#skills p \"Node.js · Express · APIs REST\"",
+   "msg": "starts at x 630.4; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#skills p \"Node.js · Express · APIs REST\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#skills h3 \"Dados / Data\"",
+   "msg": "starts at x 152; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#skills h3 \"Dados / Data\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#skills p \"MySQL · MongoDB · Mongoose\"",
+   "msg": "starts at x 630.4; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#skills p \"MySQL · MongoDB · Mongoose\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#skills h3 \"Ferramentas / Tools\"",
+   "msg": "starts at x 152; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#skills h3 \"Ferramentas / Tools\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#skills p \"Git · GitHub · Docker Compose · \"",
+   "msg": "starts at x 630.4; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#skills p \"Git · GitHub · Docker Compose · \""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "footer.p-footer span \"Desenvolvido por Leonardo Carril\"",
+   "msg": "starts at x 681.5; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "footer.p-footer span \"Desenvolvido por Leonardo Carril\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "footer.p-footer a \"↑ TOPO\"",
+   "msg": "starts at x 1316.8; the lines are 80 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "footer.p-footer a \"↑ TOPO\""
+   ]
+  },
+  {
+   "check": "screen-short",
+   "where": "#top section.p-hero.hero \"DESENVOLVEDOR FULL STACKDisponív\"",
+   "msg": "820px tall; one screen under the nav is 900px",
+   "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-short"
+   ],
+   "wheres": [
+    "#top section.p-hero.hero \"DESENVOLVEDOR FULL STACKDisponív\""
+   ]
+  },
+  {
+   "check": "hero-fold",
+   "where": "#top section.p-hero.hero \"DESENVOLVEDOR FULL STACKDisponív\"",
+   "msg": "starts at y 80, not under the nav",
+   "fix": "the hero fills the first screen alone, its button inside it",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "hero-fold"
+   ],
+   "wheres": [
+    "#top section.p-hero.hero \"DESENVOLVEDOR FULL STACKDisponív\""
+   ]
+  },
+  {
+   "check": "neighbour-ground",
+   "where": "#about section.p-section.p-about \"02 / SOBRE MIMCurioso por nature\"",
+   "msg": "framed, 57px of #experience section.p-section.p-experience \"03 / EXPERIÊNCIAExperiência prof\"'s ground shows",
+   "fix": "end the ground with the section",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "neighbour-ground"
+   ],
+   "wheres": [
+    "#about section.p-section.p-about \"02 / SOBRE MIMCurioso por nature\""
+   ]
+  }
+ ],
+ "waived": [],
+ "warnCount": 19,
+ "at": "2026-11-12T01:01:18.452Z",
+ "openTold": true
+}

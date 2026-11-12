@@ -92,3 +92,68 @@
 .cta-note { color:#475e57; max-width:25ch; }
 @media(max-width:991px) { .cta-card { grid-template-columns:64px minmax(0,1fr); } .cta-action { grid-column:2; } }
 @media(max-width:575px) { .cta-card { grid-template-columns:minmax(0,1fr); gap:20px; } .cta-action { grid-column:1; } .cta-symbol { width:48px; height:48px; } }
+
+/* Visual refinement and responsive layouts. */
+/* Portfolio: generous editorial rhythm, forest and lime. */
+:root { --focus-ring: #37856a; }
+body { background: #f7f8f4; }
+.site-nav, .site-nav.is-scrolled { border: 1px solid #dce5df; border-radius: 18px; left: 20px; right: 20px; top: 14px; width: auto; box-shadow: 0 8px 28px #102b2310; }
+.intro { background: #102c29; padding-top: 150px; border-radius: 0 0 40px 40px; }
+.intro-layout { grid-template-columns: 1.1fr 1fr; gap: clamp(32px,5vw,80px); padding-bottom: 56px; }
+.intro h1 { font-size: clamp(2.65rem,5.1vw,4.8rem); line-height: 1.06; letter-spacing: -.055em; text-wrap: balance; }
+.intro-status { background: #ffffff08; border-color: #4c6d5e; color: #d0ecd5; padding: 10px 14px; }
+.intro-description { font-size: 1.05rem; line-height: 1.8; color: #c0d4cc; }
+.intro-primary { min-height: 52px; border-radius: 12px; box-shadow: 0 6px 0 #8ab348; transition: transform .18s, box-shadow .18s; }
+.intro-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 0 #8ab348; }
+.intro-secondary { min-height: 48px; }
+.work-preview { border-radius: 20px; border: 6px solid #ffffff16; box-shadow: 0 24px 50px #0003; }
+.work-preview-link { padding: 18px 20px; background: #173d36; }
+.work-caption { font-size: .7rem; letter-spacing: .08em; }
+.work-note { border-color: #426057; padding-block: 22px; }
+.intro-stack { border-color: #426057; padding-block: 26px; gap: 18px 32px; }
+.intro-stack > span:not(:first-child) { font-weight: 600; }
+.section { padding-block: clamp(56px,7vw,100px); }
+#projects { background: #f7f8f4; }
+.project-toolbar { padding: 16px; border: 1px solid #dce5df; border-radius: 16px; background: #fff; }
+.project-filters button { min-height: 44px; border-radius: 10px; }
+.project-card { border-radius: 20px; border: 1px solid #dce5df; box-shadow: 0 6px 18px #153b2f04; }
+.project-preview { aspect-ratio: 1.65; }
+.project-card:hover { transform: translateY(-5px); box-shadow: 0 18px 40px #153b2f12; }
+.profile-card, .service-card, .skill-card, .edu-card, .contact-form { border-radius: 20px; }
+.section-title { text-wrap: balance; }
+@media (max-width: 991.98px) {
+ .intro-layout { grid-template-columns: minmax(0,1fr); gap: 40px; }
+ .intro-work { max-width: 700px; }
+ .intro { padding-top: 132px; }
+ .site-nav .container { padding-inline: 16px; }
+}
+@media (max-width: 575.98px) {
+ .site-nav, .site-nav.is-scrolled { left: 10px; right: 10px; top: 10px; border-radius: 14px; }
+ .intro { padding-top: 116px; border-radius: 0 0 24px 24px; }
+ .intro h1 { font-size: clamp(2.3rem,10vw,3.4rem); }
+ .intro-description { font-size: 1rem; }
+ .intro-actions { align-items: stretch; gap: 14px; }
+ .intro-primary { justify-content: space-between; flex: 1 1 100%; }
+ .intro-secondary { justify-content: space-between; width: 100%; }
+ .work-caption { flex-wrap: wrap; font-size: .65rem; }
+ .work-preview { border-width: 3px; border-radius: 14px; }
+ .intro-stack { gap: 14px 22px; }
+ .project-toolbar { padding: 12px; }
+ .project-filters { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); width: 100%; }
+ .project-filters button { padding: 10px 8px; }
+ .brand-name { font-size: .85rem; }
+}
+
+/* Layout resilience and accessible interaction. */
+html { scroll-padding-top: 100px; }
+img { max-width: 100%; }
+button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+button, input, select, textarea { touch-action: manipulation; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 3px solid var(--focus-ring, #2563eb); outline-offset: 4px; }
+input, select, textarea { max-width: 100%; }
+@media (max-width: 600px) {
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), :is(select, textarea):not([hidden]):not([disabled]) { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}

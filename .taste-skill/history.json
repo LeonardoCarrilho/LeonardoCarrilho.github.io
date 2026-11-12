@@ -1,0 +1,20 @@
+{
+  "palettes": [
+    "cool-grey-cobalt"
+  ],
+  "types": [
+    "hanken"
+  ],
+  "dealt": [
+    "hanken",
+    "fraunces",
+    "rethink"
+  ],
+  "moments": [
+    {
+      "id": "word-highlight",
+      "at": "2026-11-11T23:45:45.964Z",
+      "seed": "bfe38dcf"
+    }
+  ]
+}
