@@ -7,3 +7,5 @@ O portfólio usa Hanken Grotesk, cinza claro e azul para destacar os projetos e 
 O movimento de entrada e o momento de texto usam cópias sem alteração do kit design-taste-frontend em `public/taste`. O carregamento usa arquivos locais, mantendo a CSP sem scripts inline. Preferência de movimento reduzido deve deixar todo o conteúdo visível.
 
 Antes de publicar, execute lint, cobertura, build e os testes Playwright, incluindo PT/EN e larguras 320, 390, 768, 820, 1024 e 1440. Capturas e limitações do gate ficam em `.taste-skill`. O trabalho continua no PR #6 e na issue #8; não foi publicado.
+
+As capturas em `public/projects` vêm dos próprios projetos em modo de demonstração: Helpdesk (lista de chamados), Dashboard (visão geral), Loja (catálogo), Clima (consulta do tempo) e API de Tarefas (Swagger local). A captura Swagger é somente uma imagem; não acrescenta URL pública nem habilita documentação em produção. RH e API de Finanças conservam a apresentação tipográfica existente.

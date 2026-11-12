@@ -1,11 +1,43 @@
-# Verificação — rodada intermediária
+# Verificação final
 
-Cobertura: 5/5 testes, 100% dos helpers exercitados. Playwright: 12/12 e smoke original aprovados antes dos ajustes finais de CSS; novo caso de foco por teclado aguarda execução. Gate inicial: FAIL 35.
+## Resultado
 
-Build e lint aprovados. npm audit --audit-level=low: zero vulnerabilidades após a correção documentada em docs/SECURITY.md.
+Gate: **OPEN 34**, três rodadas consumidas (1: 35 → 2: 43 → 3: 34). Não é aprovação integral da skill. Nenhum waiver foi usado; os scripts e o kit não foram alterados. Lista exata em gate.json e relatório de consistência.
 
-Capturas antes representam origin/main. Implementação continua a branch do PR de segurança, preservando CSP, observabilidade e comportamento atual main. Capturas after desta rodada antecedem os últimos refinamentos de foco, hierarquia e alinhamento; a rodada final atualizará estas evidências.
+Build e lint aprovados; lint somente informa configuração Biome legada. npm audit --audit-level=low: zero vulnerabilidades (dependency-audit.json; rationale em docs/SECURITY.md).
 
-O gate ainda não passou. Há achados corrigidos aguardando nova avaliação e incompatibilidades abertas: altura fixa de seção/rodapé, extensão do catálogo/coleção de projetos, estrutura React e classificação de títulos em português. As listas completas estão em gate.json. Nenhuma falha foi ocultada ou marcada como aprovada. Não há waivers.
+Cobertura 5/5, 100% dos helpers exercitados. Suíte Playwright completa anterior 12/12, smoke original aprovado, CI do commit df30e2f também validou o novo teste de 32 Tabs. Após atualizar cinco imagens e ajustar os espaçamentos, os percursos 1440/390 passaram novamente (2/2).
 
-Perfis e crops reproduzíveis ficam locais. Evidências selecionadas incluem antes/depois desktop e celular; os testes cobrem também 320, 768, 820 e 1024 px. Não houve publicação.
+Os percursos exercitam seis larguras: 320, 390, 768, 820, 1024 e 1440. Verificam sete cartões, imagens carregadas, PT/EN, contatos reais e ausência de overflow/erros JavaScript.
+
+## Evidências
+
+Antes: before-1440.png (origin/main). Depois: after-1440.png, after-390.png e preview.jpg. english-390.png registra o idioma inglês. Cinco imagens de projetos foram renovadas com capturas reais locais dos respectivos apps; sem novos links ou cartões. docs/preview.png foi atualizado para o README. Capturas extras e crops permanecem locais, fora do Git.
+
+Não há score comparativo de baseline: o antes foi registrado por captura, não por gate. As contagens acima representam as três revisões da implementação. Não foi executado Lighthouse/perf separado nem alegada aprovação completa de acessibilidade. Os testes automatizados e a inspeção visual são evidências limitadas às condições registradas.
+
+## Limitações abertas
+
+O avaliador aplica regras de landing page a conteúdo funcional: seções e rodapé de uma tela exata, poucos cartões iguais, títulos reconhecidos por vocabulário e linhas de alinhamento sem reconhecer os subgrids/listas. Preservamos conteúdo completo, React, navegação e comportamento do projeto. Experiência, habilidades e contato permanecem predominantemente textuais para não inventar fotografias ou interfaces. O nome em duas linhas é intencional, não uma quebra acidental na navegação.
+
+| Regra aberta | Quantidade |
+|---|---:|
+| nav | 1 |
+| no-visual | 2 |
+| text-only | 1 |
+| copy-headings | 1 |
+| section-height | 6 |
+| section-air | 1 |
+| one-section | 3 |
+| one-heading | 1 |
+| container-edges | 5 |
+| edge-left | 10 |
+| screen-short | 1 |
+| hero-fold | 1 |
+| neighbour-ground | 1 |
+
+Checagens de consistência sem falha: assets, shader-lint, gl-fallback, empty-visual, hero-fill, flush, placeholder, sample-label, caption, credit-wall, nav-covers, spill, off-viewport, fold-card, overlap-text, collide, row-gap, cut-text, fold-cut, marquee, pinned, hidden-content, webgl, card-visual, card-family, card-layout, nesting, effect-repeat, ui-fit, ui-centre, dark-ground, button-styles, button-shape, same-action, button-picture, cta, pricing-tiers, copy-headline, copy-fact, stagger, top-stagger, off-grid, col-edge, right-edge, centre-axis, tilt, contrast, text-contrast, body-size, busy-ground, proximity, hole, links, photo-upscale, photo-credit, nav-family, link-styles, heading-align, label-centre, fake-button, stranded-action, unit-break, tab-wrap, effects-fit, fade-cut, copy-length, nav-current, progress-bar, button-contrast, photo-print, split-align, fact-agree, fold-action, action-count, product-shown, same-object, font-load, visual-caption, visual-empty, effect-kind, hero-enter, moment-none, street-number, postcode, coordinates, company-number, phone-number, hero-screen, row-lines, split-pair, motion-layer, count-text, loop-cycle, section-tile, empty-area, a11y-name, img-alt, field-label, heading-order, tabindex, focus-ring, focus-visible, focus-hidden, menu-toggle, lang, page-meta, action-repeat, map-link, open-now, assumed, run-on, form-fields, form-send.
+
+## Integração
+
+Base: PR #6 origin/chore/security-quality, com merge de main fbab0bc e resolução preservando o App atual, observabilidade e workflow de segurança. PR #9 não foi integrado. Revisão independente de código realizada; o problema de copy dos favoritos foi corrigido. Mudanças prontas para revisão, sem merge ou publicação.

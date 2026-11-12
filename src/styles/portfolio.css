@@ -28,3 +28,4 @@ html{scroll-behavior:auto}
 .p-contact a:focus-visible,.p-footer a:focus-visible{outline-color:#fff}
 @media(max-width:1023px){.p-section-heading,.p-contact-grid{grid-template-columns:1fr}}
 @media(max-width:700px){.p-hero-grid,.p-about-grid,.p-experience-grid{grid-template-columns:1fr}.p-hero-grid{padding-block:32px}.p-contact h2{font-size:36px}}
+.p-project-grid{column-gap:24px}.p-contact{min-height:auto}.p-hero-bottom{padding-bottom:24px}

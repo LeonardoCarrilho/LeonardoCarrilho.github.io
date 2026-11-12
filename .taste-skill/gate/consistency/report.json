@@ -1,7 +1,7 @@
 {
  "page": "C:\\Users\\leoca\\Documents\\Codex\\2026-11-10\\jarvis-continuidade\\work\\redesign\\LeonardoCarrilho.github.io\\dist\\index.html",
  "url": "http://127.0.0.1:5200/index.html",
- "at": "2026-11-12T00:18:31.184Z",
+ "at": "2026-11-12T00:59:21.407Z",
  "out": "C:\\Users\\leoca\\Documents\\Codex\\2026-11-10\\jarvis-continuidade\\work\\redesign\\LeonardoCarrilho.github.io\\.taste-skill\\gate\\consistency",
  "widths": [
   {
@@ -14,7 +14,7 @@
     {
      "check": "nav",
      "sev": "FAIL",
-     "sel": "div.portfolio > header.p-header > div.p-wrap.p-header-inner > a.p-logo",
+     "sel": "div.portfolio > header.p-header > div.wrap.p-wrap > a.p-logo",
      "text": "LC. LEONARDO CARRILHO",
      "stop": 0,
      "msg": "nav link wraps to a second line",
@@ -27,8 +27,8 @@
      "sel": "section#experience",
      "text": "Experiência profissional.",
      "msg": "no picture, effect or mock in this section; a feature section needs a visual",
-     "stop": 7,
-     "crop": "1440-14-no-visual.jpg",
+     "stop": 6,
+     "crop": "1440-12-no-visual.jpg",
      "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits"
     },
     {
@@ -37,8 +37,8 @@
      "sel": "section#skills",
      "text": "Da interface aos dados.",
      "msg": "no picture, effect or mock in this section; a feature section needs a visual",
-     "stop": 8,
-     "crop": "1440-16-no-visual.jpg",
+     "stop": 7,
+     "crop": "1440-14-no-visual.jpg",
      "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits"
     },
     {
@@ -48,133 +48,27 @@
      "text": "Vamos conversar?",
      "msg": "the closing section is only text: no picture, icon, mock or effect in it",
      "stop": 9,
-     "crop": "1440-17-text-only.jpg",
+     "crop": "1440-16-text-only.jpg",
      "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground"
-    },
-    {
-     "check": "cta",
-     "sev": "FAIL",
-     "sel": "section#contact",
-     "text": "Vamos conversar?",
-     "msg": "the last section before the footer ends with no button",
-     "stop": 9,
-     "crop": "1440-18-cta.jpg",
-     "fix": "add the action: a button in the hero, one on every priced item, one in the closing section"
     },
     {
      "check": "copy-headings",
      "sev": "FAIL",
-     "sel": "div.p-wrap > div.p-section-heading > div > h2",
+     "sel": "div.wrap.p-wrap > div.p-section-heading > div > h2",
      "text": "Projetos que mostram como eu construo.",
      "msg": "\"Projetos que mostram como eu construo.\" names no product, part, place or section (12 headings like it; at most one brand line per page) (and 11 more like it: \"Sistema de Gestão de RH\", \"Dashboard de Vendas\", \"Painel Clima\", \"Experiência profissional\", ...)",
      "stop": 1,
-     "crop": "1440-05-copy-headings.jpg",
+     "crop": "1440-04-copy-headings.jpg",
      "fix": "name the thing in every heading: the product, a part, the place or a section noun"
-    },
-    {
-     "check": "heading-scale",
-     "sev": "FAIL",
-     "sel": "section#contact > div.p-wrap > div.p-contact-grid > h2",
-     "text": "Vamos conversar?",
-     "msg": "an h2 at 96px, as large as the h1 (73.4px) or larger",
-     "stop": 9,
-     "crop": "1440-19-heading-scale.jpg",
-     "fix": "size headings by level: the h1 largest, one size per level, each level below the one above"
-    },
-    {
-     "check": "heading-scale",
-     "sev": "FAIL",
-     "sel": "section#contact > div.p-wrap > div.p-contact-grid > h2",
-     "text": "Vamos conversar?",
-     "msg": "h2 headings in 2 sizes, 57.6px (\"Projetos que mostram com\") to 96px (x1.67)",
-     "stop": 9,
-     "crop": "1440-20-heading-scale.jpg",
-     "fix": "size headings by level: the h1 largest, one size per level, each level below the one above"
-    },
-    {
-     "check": "section-gaps",
-     "sev": "FAIL",
-     "sel": "section#top / section#projects",
-     "text": "",
-     "stop": 1,
-     "msg": "141px between these sections, -65% against the median 401px of gaps at a change of ground",
-     "crop": "1440-06-section-gaps.jpg",
-     "fix": "use one gap between sections (all within 25% of each other)"
-    },
-    {
-     "check": "empty-area",
-     "sev": "FAIL",
-     "sel": "section#experience",
-     "text": "Experiência profissional.",
-     "msg": "57% of the section is empty: 112px above its first content, 128px under its last (div.p-experience-education), 22% beside content that covers under half the container, in its 684px of rows (WARN over 35%, FAIL over 50%)",
-     "stop": 7,
-     "crop": "1440-15-empty-area.jpg",
-     "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)"
-    },
-    {
-     "check": "empty-area",
-     "sev": "FAIL",
-     "sel": "section#contact",
-     "text": "Vamos conversar?",
-     "msg": "50% of the section is empty: 64px above its first content, 32px of empty rows between its content, 64px under its last (a:nth-of-type(1)), 22% beside content that covers under half the container, in its 548px of rows (WARN over 35%, FAIL over 50%)",
-     "stop": 9,
-     "crop": "1440-21-empty-area.jpg",
-     "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)"
-    },
-    {
-     "check": "focus-visible",
-     "sev": "FAIL",
-     "sel": "article.p-project.p-featured:nth-of-type(2) > div.p-project-info:nth-of-type(2) > div.p-project-links:nth-of-type(2) > a:nth-of-type(1)",
-     "text": "Código ↗",
-     "stop": 13,
-     "msg": "Tab stop 13, a \"Código ↗\": the focus lands on something you cannot see",
-     "fix": "keep the kit's ring (system.css :focus-visible, 2px in --action, there at once); a control that hides itself shows on focus"
-    },
-    {
-     "check": "focus-visible",
-     "sev": "FAIL",
-     "sel": "article.p-project.p-featured:nth-of-type(2) > div.p-project-info:nth-of-type(2) > div.p-project-links:nth-of-type(2) > a:nth-of-type(2)",
-     "text": "Ver projeto ↗",
-     "stop": 14,
-     "msg": "Tab stop 14, a \"Ver projeto ↗\": the focus lands on something you cannot see",
-     "fix": "keep the kit's ring (system.css :focus-visible, 2px in --action, there at once); a control that hides itself shows on focus"
-    },
-    {
-     "check": "focus-visible",
-     "sev": "FAIL",
-     "sel": "article.p-project:nth-of-type(3) > div.p-project-info:nth-of-type(2) > div.p-project-links:nth-of-type(2) > a",
-     "text": "Código ↗",
-     "stop": 15,
-     "msg": "Tab stop 15, a \"Código ↗\": the focus lands on something you cannot see",
-     "fix": "keep the kit's ring (system.css :focus-visible, 2px in --action, there at once); a control that hides itself shows on focus"
-    },
-    {
-     "check": "focus-visible",
-     "sev": "FAIL",
-     "sel": "article.p-project:nth-of-type(5) > div.p-project-info:nth-of-type(2) > div.p-project-links:nth-of-type(2) > a:nth-of-type(1)",
-     "text": "Código ↗",
-     "stop": 16,
-     "msg": "Tab stop 18, a \"Código ↗\": the focus lands on something you cannot see",
-     "fix": "keep the kit's ring (system.css :focus-visible, 2px in --action, there at once); a control that hides itself shows on focus"
-    },
-    {
-     "check": "flush",
-     "sev": "WARN",
-     "sel": "section#top > div.p-wrap > div.p-hero-bottom > a",
-     "text": "SCROLL ↓",
-     "msg": "its button sits 29px above the lower edge of section#top, where the ground changes to section#projects",
-     "stop": 1,
-     "crop": "1440-07-flush.jpg",
-     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
     },
     {
      "check": "scroll-reveal",
      "sev": "WARN",
-     "sel": "section#about > div.p-wrap.p-about-grid > div.p-about-copy > p.mo-wh__text",
+     "sel": "section#about > div.wrap.p-wrap > div.p-about-copy > p.mo-wh__text",
      "text": "Sou formado em Ciências da Computação e venho de",
      "msg": "starts \"color\" (0.2 s) the moment it is scrolled into view (an IntersectionObserver) on span.mo-w:nth-of-type(1) (inside a dealt moment's section, [data-moment]: an enter moment is expected on every kind; its still is judged under reduced motion)",
      "stop": 5,
-     "crop": "1440-12-scroll-reveal.jpg",
+     "crop": "1440-10-scroll-reveal.jpg",
      "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view"
     },
     {
@@ -182,7 +76,7 @@
      "sev": "WARN",
      "sel": "div#root > div.portfolio > a.p-skip",
      "text": "Ir para o conteúdo",
-     "msg": "\"Ir para o conteúdo\" does not start with a verb (book, buy, try, start, get, see...) (and 1 more like it: \"Ver projetos ↘\")",
+     "msg": "\"Ir para o conteúdo\" does not start with a verb (book, buy, try, start, get, see...) (and 2 more like it: \"Ver projetos ↘\", \"leofernandescarrilho@gma\")",
      "stop": null,
      "fix": "label buttons with a verb and what the visitor gets (\"Book a room\", \"Start free trial\")"
     },
@@ -200,20 +94,10 @@
      "sev": "WARN",
      "sel": "article.p-project:nth-of-type(3) > div.p-project-visual > div.p-api-art > strong",
      "text": "finance.api",
-     "msg": "2 lines of plain text set larger than the section headings (68px against h2 57.6px)",
+     "msg": "1 line of plain text set larger than the section headings (68px against h2 57.6px)",
      "stop": 2,
-     "crop": "1440-10-heading-scale.jpg",
+     "crop": "1440-08-heading-scale.jpg",
      "fix": "size headings by level: the h1 largest, one size per level, each level below the one above"
-    },
-    {
-     "check": "col-edge",
-     "sev": "WARN",
-     "sel": "section#top > div.p-wrap > div.p-hero-grid > a.p-work-preview",
-     "text": "",
-     "msg": "the second column starts at 3 places: 744px (section#top), 752px (section#about, section#experience, section#contact), 874px (section#projects)",
-     "stop": 0,
-     "crop": "1440-02-col-edge.jpg",
-     "fix": "start the second column of every split on the same one or two grid columns"
     },
     {
      "check": "section-gaps",
@@ -221,38 +105,58 @@
      "sel": "section#top / section#projects",
      "text": "",
      "stop": 1,
-     "msg": "uneven space at the edge of a band: 29px outside its edge, 112px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
-     "crop": "1440-08-section-gaps.jpg",
+     "msg": "152px between these sections, -49% against the median 296px of gaps at a change of ground",
+     "crop": "1440-05-section-gaps.jpg",
+     "fix": "use one gap between sections (all within 25% of each other)"
+    },
+    {
+     "check": "section-gaps",
+     "sev": "WARN",
+     "sel": "section#top / section#projects",
+     "text": "",
+     "stop": 1,
+     "msg": "uneven space at the edge of a band: 40px outside its edge, 112px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
+     "crop": "1440-06-section-gaps.jpg",
+     "fix": "use one gap between sections (all within 25% of each other)"
+    },
+    {
+     "check": "section-gaps",
+     "sev": "WARN",
+     "sel": "section#skills / section#contact",
+     "text": "",
+     "stop": 8,
+     "msg": "uneven space at the edge of a band: 206px outside its edge, 112px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
+     "crop": "1440-15-section-gaps.jpg",
      "fix": "use one gap between sections (all within 25% of each other)"
     },
     {
      "check": "photo-set",
      "sev": "WARN",
-     "sel": "div.p-project-grid > article.p-project:nth-of-type(5) > div.p-project-visual > img",
-     "text": "loja-virtual.jpg",
+     "sel": "div.p-project-grid > article.p-project:nth-of-type(6) > div.p-project-visual > img",
+     "text": "api-tarefas.jpg",
      "stop": 3,
-     "msg": "5 photographs in more than one look: saturation from 0.05 to 0.41; the odd one out is loja-virtual.jpg",
-     "crop": "1440-11-photo-set.jpg",
+     "msg": "6 photographs in more than one look: lightness from 0.15 to 0.96; saturation from 0.06 to 0.40; the odd one out is api-tarefas.jpg",
+     "crop": "1440-09-photo-set.jpg",
      "fix": "grade the photographs to one look (light, colour, warmth), or replace the odd one out"
     },
     {
      "check": "nav-labels",
      "sev": "WARN",
-     "sel": "header.p-header > div.p-wrap.p-header-inner > nav > a:nth-of-type(3)",
+     "sel": "header.p-header > div.wrap.p-wrap > nav > a:nth-of-type(3)",
      "text": "Conhecimentos",
      "msg": "\"Conhecimentos\" opens a section headed \"Da interface aos dados.\"",
      "stop": 0,
-     "crop": "1440-03-nav-labels.jpg",
+     "crop": "1440-02-nav-labels.jpg",
      "fix": "name each nav link after the heading of the section it opens"
     },
     {
      "check": "nav-labels",
      "sev": "WARN",
-     "sel": "header.p-header > div.p-wrap.p-header-inner > nav > a:nth-of-type(4)",
+     "sel": "header.p-header > div.wrap.p-wrap > nav > a:nth-of-type(4)",
      "text": "Contato",
      "msg": "\"Contato\" opens a section headed \"Vamos conversar?\"",
      "stop": 0,
-     "crop": "1440-04-nav-labels.jpg",
+     "crop": "1440-03-nav-labels.jpg",
      "fix": "name each nav link after the heading of the section it opens"
     },
     {
@@ -263,7 +167,7 @@
      "msg": "the photograph helpdesk-fullstack.jpg is shown 2 times on the page: a picture the visitor has already seen",
      "fix": "show each photograph once: a different picture of what this section names, or none",
      "stop": 1,
-     "crop": "1440-09-photo-repeat.jpg"
+     "crop": "1440-07-photo-repeat.jpg"
     },
     {
      "check": "grounds",
@@ -272,8 +176,18 @@
      "text": "02 / SOBRE MIM Curioso por natureza. Des",
      "msg": "4 flat grounds across the page (#eef0f3 section x2, #fafafa section x2, #e2e5ea section, #1f2de6 section): three at most (the base, a surface, an inverse)",
      "stop": 5,
-     "crop": "1440-13-grounds.jpg",
+     "crop": "1440-11-grounds.jpg",
      "fix": "three flat grounds at most (the base, one surface, one inverse): lay the other bands on one of them"
+    },
+    {
+     "check": "one-screen",
+     "sev": "WARN",
+     "sel": "section#experience",
+     "text": "Experiência profissional.",
+     "msg": "1 section is shorter than the screen, so the next one's heading or picture shows with it: \"Experiência profissional.\" is 594px of the 900px under the nav, and \"Da interface aos dados.\" shows below it",
+     "fix": "give each section the screen (min-height: 100svh less the nav, its content centred), or join two short ones into one",
+     "stop": 6,
+     "crop": "1440-13-one-screen.jpg"
     },
     {
      "check": "skip-link",
@@ -294,24 +208,14 @@
      "fix": "copy the head block of starter.html: og tags, twitter:card, the icon and theme-color (references/system.md, Head)"
     },
     {
-     "check": "hero-screen",
-     "sev": "FAIL",
-     "sel": "section#top",
-     "text": "DESENVOLVEDOR FULL STACKDisponível para ",
-     "msg": "the hero ends at 907px on a 900px screen, 7px below the fold: it ends at the fold, 1px either way (SR-1)",
-     "fix": "make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter",
-     "rule": "SR-1 T1",
-     "crop": "1440-rhythm-01-hero-screen.jpg"
-    },
-    {
      "check": "section-height",
      "sev": "FAIL",
      "sel": "section#projects",
      "text": "01 / TRABALHOS SELECIONADOSProjetos que ",
-     "msg": "the section is 3279px tall (3.6 screens), 1479px over two screens (1800px): every section after the hero is one screen or two, 2px either way (SR-2)",
+     "msg": "the section is 3289px tall (3.7 screens), 1489px over two screens (1800px): every section after the hero is one screen or two, 2px either way (SR-2)",
      "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
      "rule": "SR-2 T-height",
-     "crop": "1440-rhythm-02-section-height.jpg"
+     "crop": "1440-rhythm-01-section-height.jpg"
     },
     {
      "check": "section-height",
@@ -327,25 +231,16 @@
      "sev": "FAIL",
      "sel": "section#contact",
      "text": "05 / PRÓXIMO PASSOVamos conversar?Se voc",
-     "msg": "the section is 720px tall (0.8 screens), 180px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+     "msg": "the section is 518px tall (0.6 screens), 382px short of one screen (900px): every section after the hero is one screen or two, 2px either way (and 1 more like it: \"03 / EXPERIÊNCIAExperiên\") (SR-2)",
      "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
      "rule": "SR-2 T-height"
     },
     {
      "check": "section-height",
      "sev": "FAIL",
-     "sel": "div#root > div.portfolio > footer.p-footer",
-     "text": "© 2026 LEONARDO CARRILHODesenvolvido por",
-     "msg": "the section starts at 7606px, 406px below the screen grid (8 x 900px): sections start on whole screens (SR-2)",
-     "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
-     "rule": "SR-2 T-grid"
-    },
-    {
-     "check": "section-height",
-     "sev": "FAIL",
      "sel": "section#about",
      "text": "02 / SOBRE MIMCurioso por natureza. Dese",
-     "msg": "the section starts at 4186px, 315px above the screen grid (5 x 900px): sections start on whole screens (SR-2)",
+     "msg": "the section starts at 4189px, 311px above the screen grid (5 x 900px): sections start on whole screens (SR-2)",
      "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
      "rule": "SR-2 T-grid"
     },
@@ -354,7 +249,16 @@
      "sev": "FAIL",
      "sel": "section#experience",
      "text": "03 / EXPERIÊNCIAExperiência profissional",
-     "msg": "the section starts at 5086px, 315px above the screen grid (6 x 900px): sections start on whole screens (and 4 more like it: \"04 / FERRAMENTAS & CONHE\", \"05 / PRÓXIMO PASSOVamos \", \"DESENVOLVEDOR FULL STACK\") (SR-2)",
+     "msg": "the section starts at 5089px, 311px above the screen grid (6 x 900px): sections start on whole screens (SR-2)",
+     "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+     "rule": "SR-2 T-grid"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "section#skills",
+     "text": "04 / FERRAMENTAS & CONHECIMENTOSDa inter",
+     "msg": "the section starts at 5683px, 283px below the screen grid (6 x 900px): sections start on whole screens (and 3 more like it: \"05 / PRÓXIMO PASSOVamos \", \"© 2026 LEONARDO CARRILHO\", \"DESENVOLVEDOR FULL STACK\") (SR-2)",
      "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
      "rule": "SR-2 T-grid"
     },
@@ -368,60 +272,61 @@
      "rule": "SR-2 T-fit"
     },
     {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "section#contact",
+     "text": "05 / PRÓXIMO PASSOVamos conversar?Se voc",
+     "msg": "the section's content does not fit it: its lowest content ends 454px below its top, past 446px (the section less 72px of bottom padding) (SR-2)",
+     "fix": "fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups",
+     "rule": "SR-2 T-fit"
+    },
+    {
      "check": "section-air",
      "sev": "FAIL",
-     "sel": "section#projects > div.p-wrap > a.p-all",
+     "sel": "section#projects > div.wrap.p-wrap > a.p-all",
      "text": "Ver todos os repositórios↗",
      "msg": "a top border across 100% of the container, between the section's content: sections and their parts are told apart by air and ground, not lines (SR-3)",
      "fix": "take the rule out: sections and their parts are parted by their ground and the air between them",
      "rule": "SR-3 T-dividers",
-     "crop": "1440-rhythm-03-section-air.jpg"
-    },
-    {
-     "check": "section-air",
-     "sev": "WARN",
-     "sel": "section#experience",
-     "text": "03 / EXPERIÊNCIAExperiência profissional",
-     "msg": "the content fills 43.1% of the section's height (388 of 900px): 55% or more (40% WARN) (SR-3)",
-     "fix": "fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block",
-     "rule": "SR-3 T-fill"
-    },
-    {
-     "check": "section-air",
-     "sev": "WARN",
-     "sel": "section#contact",
-     "text": "05 / PRÓXIMO PASSOVamos conversar?Se voc",
-     "msg": "the content fills 52.6% of the section's height (379 of 720px): 55% or more (40% WARN) (SR-3)",
-     "fix": "fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block",
-     "rule": "SR-3 T-fill"
+     "crop": "1440-rhythm-02-section-air.jpg"
     },
     {
      "check": "one-section",
      "sev": "FAIL",
-     "sel": "section#experience",
-     "text": "03 / EXPERIÊNCIAExperiência profissional",
-     "msg": "the screen at scroll 4500px (stride 5) shows 315px of section 4 and the content of 2 sections, over 24px each beside section 3: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+     "sel": "section#experience > div.wrap.p-wrap > div:nth-of-type(1) > h2",
+     "text": "Experiência profissional.",
+     "msg": "the screen at scroll 4500px (stride 5) shows 311px of section 4 and the heading of section 4 whole and the content of 2 sections, over 24px each beside section 3: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
      "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
      "rule": "SR-4 T-views",
-     "crop": "1440-rhythm-04-one-section.jpg"
+     "crop": "1440-rhythm-03-one-section.jpg"
     },
     {
      "check": "one-section",
      "sev": "FAIL",
-     "sel": "div.p-wrap > div.p-section-heading > div > h2",
+     "sel": "div.wrap.p-wrap > div.p-section-heading > div > h2",
      "text": "Da interface aos dados.",
-     "msg": "the screen at scroll 5400px (stride 6) shows 315px of section 5 and the heading of section 5 whole and the content of 2 sections, over 24px each beside section 4: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+     "msg": "the screen at scroll 5089px (the top of section 4) shows 306px of section 5 and the heading of section 5 whole and the content of 2 sections, over 24px each beside section 4: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
      "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
      "rule": "SR-4 T-views"
     },
     {
      "check": "one-section",
      "sev": "FAIL",
-     "sel": "section#contact",
-     "text": "05 / PRÓXIMO PASSOVamos conversar?Se voc",
-     "msg": "the screen at scroll 6300px (stride 7) shows 315px of section 6 and the content of 2 sections, over 24px each beside section 5: a screen shows one section (another may peek 8px, 24px WARN) (and 3 more like it: scroll 6799px, scroll 80px, scroll 3600px) (SR-4)",
+     "sel": "section#skills",
+     "text": "04 / FERRAMENTAS & CONHECIMENTOSDa inter",
+     "msg": "the screen at scroll 6294px (the top of section 6) shows 289px of section 5 and the content of 3 sections, over 24px each beside section 6: a screen shows one section (another may peek 8px, 24px WARN) (and 3 more like it: scroll 5400px, scroll 80px, scroll 3600px) (SR-4)",
      "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
      "rule": "SR-4 T-views"
+    },
+    {
+     "check": "one-heading",
+     "sev": "FAIL",
+     "sel": "section#experience > div.wrap.p-wrap > div:nth-of-type(1) > h2",
+     "text": "Experiência profissional.",
+     "msg": "headings of two sections show whole on one screen at 5 of 126 scroll positions (4%; at scroll 4450, 4500, 5100, 5150px), here with \"Curioso por natureza. Desenvolve\": at most 3% on a desktop (SR-5)",
+     "fix": "make the sections one screen tall so their headings sit a screen apart and two never share one",
+     "rule": "SR-5 T2",
+     "crop": "1440-rhythm-04-one-heading.jpg"
     },
     {
      "check": "container-edges",
@@ -436,18 +341,9 @@
     {
      "check": "container-edges",
      "sev": "FAIL",
-     "sel": "section#top",
+     "sel": "section#top > div.wrap.p-wrap",
      "text": "DESENVOLVEDOR FULL STACKDisponível para ",
-     "msg": "the section needs exactly one in-flow child .wrap (it has 1 in-flow child, 0 .wrap) (SR-6)",
-     "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
-     "rule": "SR-6 T1-structure"
-    },
-    {
-     "check": "container-edges",
-     "sev": "FAIL",
-     "sel": "section#projects",
-     "text": "01 / TRABALHOS SELECIONADOSProjetos que ",
-     "msg": "the section needs exactly one in-flow child .wrap (it has 1 in-flow child, 0 .wrap) (and 5 more like it: \"02 / SOBRE MIMCurioso po\", \"03 / EXPERIÊNCIAExperiên\", \"04 / FERRAMENTAS & CONHE\") (SR-6)",
+     "msg": "the hero's .wrap holds 3 children, 0 of them .hero-text: one .hero-text and at most one strip (SR-6)",
      "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
      "rule": "SR-6 T1-structure"
     },
@@ -456,7 +352,7 @@
      "sev": "FAIL",
      "sel": "article.p-project:nth-of-type(5) > div.p-project-info > div.p-project-meta > span",
      "text": "React / Vite / localStorage",
-     "msg": "2 text blocks start on a left line at x 551, 471px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (also \"React / Vite / Open-Meteo\") (SR-6)",
+     "msg": "2 text blocks start on a left line at x 555, 475px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (also \"React / Vite / Open-Meteo\") (SR-6)",
      "fix": "start the text on the container's left, or on the one split line every split shares",
      "rule": "SR-6 T3-left-lines"
     },
@@ -465,7 +361,7 @@
      "sev": "FAIL",
      "sel": "article.p-project:nth-of-type(3) > div.p-project-info > div.p-project-meta > span",
      "text": "Node.js / Express / MySQL / JWT",
-     "msg": "1 text block starts on a left line at x 509, 429px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (SR-6)",
+     "msg": "1 text block starts on a left line at x 513, 433px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (SR-6)",
      "fix": "start the text on the container's left, or on the one split line every split shares",
      "rule": "SR-6 T3-left-lines"
     },
@@ -474,55 +370,9 @@
      "sev": "FAIL",
      "sel": "article.p-project.p-rh > div.p-project-info > div.p-project-meta > span",
      "text": "React / Node.js / Express / Tailwind CSS",
-     "msg": "1 text block starts on a left line at x 471, 391px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (and 1 more like it: x 752) (SR-6)",
+     "msg": "1 text block starts on a left line at x 475, 395px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (SR-6)",
      "fix": "start the text on the container's left, or on the one split line every split shares",
      "rule": "SR-6 T3-left-lines"
-    },
-    {
-     "check": "split-pair",
-     "sev": "FAIL",
-     "sel": "section#projects > div.p-wrap > div.p-section-heading",
-     "text": "01 / TRABALHOS SELECIONADOSProjetos que ",
-     "msg": "the two columns of the split start 104px apart at the top: a split's columns are top-aligned, 8px either way (SR-8)",
-     "fix": "top-align both columns of the split (align-items: start)",
-     "rule": "SR-8 T-mode",
-     "crop": "1440-rhythm-06-split-pair.jpg"
-    },
-    {
-     "check": "split-pair",
-     "sev": "FAIL",
-     "sel": "section#top > div.p-wrap > div.p-hero-grid",
-     "text": "LEONARDO CARRILHO © 2026Desenvolvimentof",
-     "msg": "the two columns of the split start 92px apart at the top (centred on each other): a split's columns are top-aligned, 8px either way (SR-8)",
-     "fix": "top-align both columns of the split (align-items: start)",
-     "rule": "SR-8 T-mode"
-    },
-    {
-     "check": "split-pair",
-     "sev": "FAIL",
-     "sel": "section#projects > div.p-wrap > div.p-section-heading",
-     "text": "01 / TRABALHOS SELECIONADOSProjetos que ",
-     "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 874, the first split's at 744; its right column starts at x 874, on none of the split lines 623 (k=5), 732 (k=6), 841 (k=7) (SR-8)",
-     "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
-     "rule": "SR-8 T-pair"
-    },
-    {
-     "check": "split-pair",
-     "sev": "FAIL",
-     "sel": "section#experience > div.p-wrap.p-experience-grid",
-     "text": "03 / EXPERIÊNCIAExperiência profissional",
-     "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 752, the first split's at 744; its right column starts at x 752, on none of the split lines 623 (k=5), 732 (k=6), 841 (k=7) (SR-8)",
-     "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
-     "rule": "SR-8 T-pair"
-    },
-    {
-     "check": "split-pair",
-     "sev": "FAIL",
-     "sel": "section#contact > div.p-wrap > div.p-contact-grid",
-     "text": "Vamos conversar?Se você tem uma oportuni",
-     "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 752, the first split's at 744; its right column starts at x 752, on none of the split lines 623 (k=5), 732 (k=6), 841 (k=7) (and 2 more like it: \"LEONARDO CARRILHO © 2026\", \"02 / SOBRE MIMCurioso po\") (SR-8)",
-     "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
-     "rule": "SR-8 T-pair"
     }
    ],
    "glAsked": 0
@@ -561,43 +411,13 @@
      "text": "Vamos conversar?",
      "msg": "the closing section is only text: no picture, icon, mock or effect in it",
      "stop": 11,
-     "crop": "390-16-text-only.jpg",
+     "crop": "390-14-text-only.jpg",
      "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground"
-    },
-    {
-     "check": "cta",
-     "sev": "FAIL",
-     "sel": "section#contact",
-     "text": "Vamos conversar?",
-     "msg": "the last section before the footer ends with no button",
-     "stop": 11,
-     "crop": "390-17-cta.jpg",
-     "fix": "add the action: a button in the hero, one on every priced item, one in the closing section"
-    },
-    {
-     "check": "heading-scale",
-     "sev": "FAIL",
-     "sel": "section#contact > div.p-wrap > div.p-contact-grid > h2",
-     "text": "Vamos conversar?",
-     "msg": "an h2 at 56px, as large as the h1 (39px) or larger",
-     "stop": 10,
-     "crop": "390-14-heading-scale.jpg",
-     "fix": "size headings by level: the h1 largest, one size per level, each level below the one above"
-    },
-    {
-     "check": "heading-scale",
-     "sev": "FAIL",
-     "sel": "section#contact > div.p-wrap > div.p-contact-grid > h2",
-     "text": "Vamos conversar?",
-     "msg": "h2 headings in 2 sizes, 36px (\"Projetos que mostram com\") to 56px (x1.56)",
-     "stop": 10,
-     "crop": "390-15-heading-scale.jpg",
-     "fix": "size headings by level: the h1 largest, one size per level, each level below the one above"
     },
     {
      "check": "tap-size",
      "sev": "WARN",
-     "sel": "div.portfolio > header.p-header > div.p-wrap.p-header-inner > a.p-logo",
+     "sel": "div.portfolio > header.p-header > div.wrap.p-wrap > a.p-logo",
      "text": "LC.",
      "msg": "a 39x42px tap target: under the 44px a phone needs",
      "stop": 0,
@@ -607,7 +427,7 @@
     {
      "check": "scroll-reveal",
      "sev": "WARN",
-     "sel": "section#about > div.p-wrap.p-about-grid > div.p-about-copy > p.mo-wh__text",
+     "sel": "section#about > div.wrap.p-wrap > div.p-about-copy > p.mo-wh__text",
      "text": "Sou formado em Ciências da Computação e venho de",
      "msg": "starts \"color\" (0.2 s) the moment it is scrolled into view (an IntersectionObserver) on span.mo-w:nth-of-type(1) (inside a dealt moment's section, [data-moment]: an enter moment is expected on every kind; its still is judged under reduced motion)",
      "stop": 7,
@@ -625,23 +445,13 @@
      "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits"
     },
     {
-     "check": "no-visual",
-     "sev": "WARN",
-     "sel": "section#projects",
-     "text": "Projetos que mostram como eu construo.",
-     "msg": "pictures, effects and mocks cover 20% of this section; a feature section needs a visual (about 25% or more)",
-     "stop": 2,
-     "crop": "390-05-no-visual.jpg",
-     "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits"
-    },
-    {
      "check": "heading-scale",
      "sev": "WARN",
      "sel": "div.p-project-grid > article.p-project.p-rh > div.p-project-info > h3",
      "text": "Sistema de Gestão de RH",
      "msg": "the h3s (28px) are only 1.29x smaller than the h2s (36px): one level a clear step (1.3x or more) below the other",
      "stop": 2,
-     "crop": "390-06-heading-scale.jpg",
+     "crop": "390-05-heading-scale.jpg",
      "fix": "size headings by level: the h1 largest, one size per level, each level below the one above"
     },
     {
@@ -650,7 +460,7 @@
      "sel": "section#top / section#projects",
      "text": "",
      "stop": 1,
-     "msg": "101px between these sections, -35% against the median 155px of gaps at a change of ground",
+     "msg": "109px between these sections, -30% against the median 155px of gaps at a change of ground",
      "crop": "390-03-section-gaps.jpg",
      "fix": "use one gap between sections (all within 25% of each other)"
     },
@@ -660,29 +470,39 @@
      "sel": "section#top / section#projects",
      "text": "",
      "stop": 1,
-     "msg": "uneven space at the edge of a band: 29px outside its edge, 72px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
+     "msg": "uneven space at the edge of a band: 37px outside its edge, 72px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
      "crop": "390-04-section-gaps.jpg",
      "fix": "use one gap between sections (all within 25% of each other)"
     },
     {
      "check": "photo-set",
      "sev": "WARN",
-     "sel": "div.p-project-grid > article.p-project:nth-of-type(5) > div.p-project-visual > img",
-     "text": "loja-virtual.jpg",
-     "stop": 4,
-     "msg": "4 photographs in more than one look: saturation from 0.06 to 0.42; the odd one out is loja-virtual.jpg",
-     "crop": "390-08-photo-set.jpg",
+     "sel": "div.p-project-grid > article.p-project:nth-of-type(6) > div.p-project-visual > img",
+     "text": "api-tarefas.jpg",
+     "stop": 5,
+     "msg": "5 photographs in more than one look: lightness from 0.15 to 0.96; saturation from 0.06 to 0.38; the odd one out is api-tarefas.jpg",
+     "crop": "390-07-photo-set.jpg",
      "fix": "grade the photographs to one look (light, colour, warmth), or replace the odd one out"
     },
     {
      "check": "orphan",
      "sev": "WARN",
-     "sel": "div.p-wrap.p-experience-grid > div.p-experience-entry > div.p-experience-education > p",
+     "sel": "div.wrap.p-wrap > div.p-experience-entry > div.p-experience-education > p",
      "text": "Universidade São Judas Tadeu (USJT) · 06/2026",
      "msg": "its last line holds only \"06/2026\"",
      "stop": 9,
      "crop": "390-13-orphan.jpg",
      "fix": "rebalance the text (text-wrap: pretty, or a shorter line) so the last line holds more than one short word"
+    },
+    {
+     "check": "photo-weight",
+     "sev": "WARN",
+     "sel": "div.p-project-grid > article.p-project:nth-of-type(7) > div.p-project-visual > img",
+     "text": "painel-clima.jpg",
+     "msg": "5 photographs are 3x or more wider than drawn on the phone, with no srcset: painel-clima.jpg is 1440px (336 KB, lazy) for a 342px frame; on a phone it arrives late and its frame shows only its ground until then",
+     "fix": "give each photograph srcset and sizes (a 800px and a 1600px file), or a smaller file: the frame never shows empty",
+     "stop": 6,
+     "crop": "390-08-photo-weight.jpg"
     },
     {
      "check": "photo-repeat",
@@ -692,7 +512,7 @@
      "msg": "the photograph helpdesk-fullstack.jpg is shown 2 times on the page: a picture the visitor has already seen",
      "fix": "show each photograph once: a different picture of what this section names, or none",
      "stop": 2,
-     "crop": "390-07-photo-repeat.jpg"
+     "crop": "390-06-photo-repeat.jpg"
     },
     {
      "check": "grounds",
@@ -721,7 +541,7 @@
  ],
  "shaders": 0,
  "hidden": {
-  "screens": 10,
+  "screens": 9,
   "quick": true
  },
  "sweep": {
@@ -743,7 +563,7 @@
    {
     "check": "tap-size",
     "sev": "WARN",
-    "sel": "div.portfolio > header.p-header > div.p-wrap.p-header-inner > a.p-logo",
+    "sel": "div.portfolio > header.p-header > div.wrap.p-wrap > a.p-logo",
     "text": "LC.",
     "msg": "a 39x42px tap target: under the 44px a phone needs",
     "crop": "narrow-320-01-tap-size.jpg",
@@ -753,8 +573,8 @@
   ]
  },
  "counts": {
-  "FAIL": 44,
-  "WARN": 28
+  "FAIL": 26,
+  "WARN": 27
  },
  "checks": {
   "assets": "PASS",
@@ -762,7 +582,7 @@
   "gl-fallback": "PASS",
   "empty-visual": "PASS",
   "hero-fill": "PASS",
-  "flush": "WARN",
+  "flush": "PASS",
   "placeholder": "PASS",
   "sample-label": "PASS",
   "caption": "PASS",
@@ -802,18 +622,18 @@
   "button-shape": "PASS",
   "same-action": "PASS",
   "button-picture": "PASS",
-  "cta": "FAIL",
+  "cta": "PASS",
   "pricing-tiers": "PASS",
   "copy-headline": "PASS",
   "copy-fact": "PASS",
   "copy-headings": "FAIL",
   "copy-buttons": "WARN",
   "copy-actions": "WARN",
-  "heading-scale": "FAIL",
+  "heading-scale": "WARN",
   "stagger": "PASS",
   "top-stagger": "PASS",
   "off-grid": "PASS",
-  "col-edge": "WARN",
+  "col-edge": "PASS",
   "right-edge": "PASS",
   "centre-axis": "PASS",
   "tilt": "PASS",
@@ -821,7 +641,7 @@
   "text-contrast": "PASS",
   "body-size": "PASS",
   "busy-ground": "PASS",
-  "section-gaps": "FAIL",
+  "section-gaps": "WARN",
   "proximity": "PASS",
   "hole": "PASS",
   "links": "PASS",
@@ -841,7 +661,7 @@
   "tab-wrap": "PASS",
   "effects-fit": "PASS",
   "fade-cut": "PASS",
-  "photo-weight": "PASS",
+  "photo-weight": "WARN",
   "copy-length": "PASS",
   "nav-current": "PASS",
   "progress-bar": "PASS",
@@ -853,7 +673,7 @@
   "fact-agree": "PASS",
   "fold-action": "PASS",
   "action-count": "PASS",
-  "one-screen": "PASS",
+  "one-screen": "WARN",
   "hover": "not checked",
   "hover-move": "not checked",
   "product-shown": "PASS",
@@ -869,26 +689,26 @@
   "coordinates": "PASS",
   "company-number": "PASS",
   "phone-number": "PASS",
-  "hero-screen": "FAIL",
+  "hero-screen": "PASS",
   "section-height": "FAIL",
   "section-air": "FAIL",
   "one-section": "FAIL",
-  "one-heading": "PASS",
+  "one-heading": "FAIL",
   "container-edges": "FAIL",
   "row-lines": "PASS",
-  "split-pair": "FAIL",
+  "split-pair": "PASS",
   "motion-layer": "PASS",
   "count-text": "PASS",
   "loop-cycle": "PASS",
   "section-tile": "PASS",
-  "empty-area": "FAIL",
+  "empty-area": "PASS",
   "a11y-name": "PASS",
   "img-alt": "PASS",
   "field-label": "PASS",
   "heading-order": "PASS",
   "tabindex": "PASS",
   "focus-ring": "PASS",
-  "focus-visible": "FAIL",
+  "focus-visible": "PASS",
   "focus-hidden": "PASS",
   "skip-link": "WARN",
   "menu-toggle": "PASS",
