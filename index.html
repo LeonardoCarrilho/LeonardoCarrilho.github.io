@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leonardo Carrilho · Desenvolvedor Full Stack</title>
+  <meta name="description" content="Portfólio de Leonardo Carrilho, desenvolvedor full stack júnior: React, Node.js, Express, MySQL e MongoDB.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <a href="#inicio" class="marca">LC</a>
+    <nav>
+      <a href="#projetos">Projetos</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <p class="saudacao">Olá, eu sou</p>
+      <h1>Leonardo Carrilho</h1>
+      <p class="cargo">Desenvolvedor Full Stack Júnior · São Paulo</p>
+      <p class="resumo">Construo aplicações web de ponta a ponta, do layout responsivo à API e ao banco de dados, com atenção a acessibilidade, testes e código limpo.</p>
+      <div class="acoes">
+        <a class="botao" href="#projetos">Ver projetos</a>
+        <a class="botao secundario" href="https://github.com/LeonardoCarrilho">GitHub</a>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <h2>Projetos</h2>
+      <div class="filtros" role="group" aria-label="Filtrar projetos">
+        <button class="ativo" data-filtro="todos">Todos</button>
+        <button data-filtro="fullstack">Full stack</button>
+        <button data-filtro="backend">Back-end</button>
+        <button data-filtro="frontend">Front-end</button>
+      </div>
+      <div class="grade" id="grade"></div>
+    </section>
+
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+      <div class="colunas">
+        <div><h3>Front-end</h3><p>HTML5 · CSS3 · Flexbox e Grid · Bootstrap · JavaScript (ES6+) · DOM · React · Hooks · styled-components · Vite</p></div>
+        <div><h3>Back-end</h3><p>Node.js · Express · APIs REST · EJS · MySQL · MongoDB · Mongoose · Firebase · Integração com IA</p></div>
+        <div><h3>Ferramentas</h3><p>Git e GitHub · GitHub Actions · Testes com node:test · Insomnia · VS Code</p></div>
+      </div>
+    </section>
+
+    <section id="contato" class="contato">
+      <h2>Vamos conversar?</h2>
+      <p>Estou aberto a oportunidades como desenvolvedor júnior.</p>
+      <a class="botao" href="https://github.com/LeonardoCarrilho">Falar pelo GitHub</a>
+    </section>
+  </main>
+
+  <footer>© <span id="ano"></span> Leonardo Carrilho</footer>
+  <script src="app.js"></script>
+</body>
+</html>
