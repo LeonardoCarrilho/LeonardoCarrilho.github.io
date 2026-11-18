@@ -8,12 +8,12 @@ const projetos = [
   { repo: "chatbot-ia", icone: "🤖", nome: "ChatBot com IA", tipo: "fullstack",
     descricao: "Chat com histórico usando o Gemini. A chave fica só no servidor, com validação e limite de requisições.",
     tags: ["React", "Node.js", "Gemini"] },
-  { repo: "todolist-mongoose", icone: "✅", nome: "TodoList", tipo: "backend",
+  { repo: "todolist-mongoose", icone: "✅", nome: "TodoList", tipo: "backend", vivo: "https://todolist-mongoose.vercel.app",
     descricao: "Listas de tarefas personalizadas por rota dinâmica, com MongoDB e testes em banco em memória.",
     tags: ["Express", "EJS", "Mongoose"] },
-  { repo: "blog-express", icone: "📝", nome: "Diário do Dev", tipo: "backend",
+  { repo: "blog-express", icone: "📝", nome: "Diário do Dev", tipo: "backend", vivo: "https://blog-express-virid.vercel.app",
     descricao: "Blog renderizado no servidor com URLs amigáveis, validação e proteção contra XSS.",
-    tags: ["Express", "EJS"] },
+    tags: ["Express", "EJS", "MongoDB"] },
   { repo: "app-pacientes", icone: "🩺", nome: "Cadastro de Pacientes", tipo: "frontend", demo: true,
     descricao: "CRUD em tempo real com Firebase, formulário validado, busca e máscara de telefone.",
     tags: ["React", "Bootstrap", "Firebase"] },
@@ -47,7 +47,7 @@ function render(filtro) {
         <ul class="tags">${p.tags.map((t) => `<li>${t}</li>`).join("")}</ul>
         <div class="links">
           <a href="${GH + p.repo}">Código</a>
-          ${p.demo ? `<a href="${PAGES + p.repo}/">Ver ao vivo</a>` : ""}
+          ${p.vivo || p.demo ? `<a href="${p.vivo || PAGES + p.repo + "/"}">Ver ao vivo</a>` : ""}
         </div>`;
       grade.append(card);
     });
