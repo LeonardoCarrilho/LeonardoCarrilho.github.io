@@ -5,7 +5,7 @@ const projetos = [
   { repo: "loja-fullstack", icone: "🛒", nome: "Loja Full Stack", tipo: "fullstack",
     descricao: "Cadastro de produtos com front em React e API REST em Express sobre MySQL. Consultas parametrizadas e testes da API.",
     tags: ["React", "Express", "MySQL"] },
-  { repo: "chatbot-ia", icone: "🤖", nome: "ChatBot com IA", tipo: "fullstack",
+  { repo: "chatbot-ia", icone: "🤖", nome: "ChatBot com IA", tipo: "fullstack", vivo: "https://chatbot-ia-amber.vercel.app",
     descricao: "Chat com histórico usando o Gemini. A chave fica só no servidor, com validação e limite de requisições.",
     tags: ["React", "Node.js", "Gemini"] },
   { repo: "todolist-mongoose", icone: "✅", nome: "TodoList", tipo: "backend", vivo: "https://todolist-mongoose.vercel.app",
