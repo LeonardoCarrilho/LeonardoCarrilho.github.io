@@ -2,9 +2,9 @@ const GH = "https://github.com/LeonardoCarrilho/";
 const PAGES = "https://leonardocarrilho.github.io/";
 
 const projetos = [
-  { repo: "loja-fullstack", icone: "🛒", nome: "Loja Full Stack", tipo: "fullstack",
-    descricao: "Cadastro de produtos com front em React e API REST em Express sobre MySQL. Consultas parametrizadas e testes da API.",
-    tags: ["React", "Express", "MySQL"] },
+  { repo: "loja-fullstack", icone: "🛒", nome: "Loja Full Stack", tipo: "fullstack", vivo: "https://loja-fullstack.vercel.app",
+    descricao: "Cadastro de produtos com front em React e API REST em Express sobre PostgreSQL ou MySQL. Consultas parametrizadas e testes da API.",
+    tags: ["React", "Express", "PostgreSQL"] },
   { repo: "chatbot-ia", icone: "🤖", nome: "ChatBot com IA", tipo: "fullstack", vivo: "https://chatbot-ia-amber.vercel.app",
     descricao: "Chat com histórico usando o Gemini. A chave fica só no servidor, com validação e limite de requisições.",
     tags: ["React", "Node.js", "Gemini"] },
