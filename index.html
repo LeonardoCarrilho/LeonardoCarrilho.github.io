@@ -4,55 +4,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leonardo Carrilho · Desenvolvedor Full Stack</title>
-  <meta name="description" content="Portfólio de Leonardo Carrilho, desenvolvedor full stack júnior: React, Node.js, Express, MySQL e MongoDB.">
+  <meta name="description" content="Portfólio de Leonardo Carrilho, desenvolvedor full stack júnior em São Paulo: React, Node.js, Express, PostgreSQL e MongoDB.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="pular" href="#projetos">Pular para os projetos</a>
+
   <header class="topo">
-    <a href="#inicio" class="marca">LC</a>
-    <nav>
+    <a href="#inicio" class="marca">Leonardo Carrilho</a>
+    <nav aria-label="Seções">
       <a href="#projetos">Projetos</a>
       <a href="#habilidades">Habilidades</a>
+      <a href="#trajetoria">Trajetória</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
 
   <main>
     <section id="inicio" class="hero">
-      <p class="saudacao">Olá, eu sou</p>
-      <h1>Leonardo Carrilho</h1>
-      <p class="cargo">Desenvolvedor Full Stack Júnior · São Paulo</p>
-      <p class="resumo">Construo aplicações web de ponta a ponta, do layout responsivo à API e ao banco de dados, com atenção a acessibilidade, testes e código limpo.</p>
-      <div class="acoes">
+      <h1>Faço aplicações web da tela ao banco de dados.<span class="cursor" aria-hidden="true"></span></h1>
+      <div class="hero-pe">
+        <p>Sou Leonardo Carrilho, desenvolvedor full stack júnior em São Paulo e bacharel em Ciência da Computação. Trabalho com React no front-end e Node.js, Express e bancos SQL e NoSQL no back-end.</p>
         <a class="botao" href="#projetos">Ver projetos</a>
-        <a class="botao secundario" href="https://github.com/LeonardoCarrilho">GitHub</a>
       </div>
     </section>
 
-    <section id="projetos">
-      <h2>Projetos</h2>
-      <div class="filtros" role="group" aria-label="Filtrar projetos">
-        <button class="ativo" data-filtro="todos">Todos</button>
-        <button data-filtro="fullstack">Full stack</button>
-        <button data-filtro="backend">Back-end</button>
-        <button data-filtro="frontend">Front-end</button>
-      </div>
-      <div class="grade" id="grade"></div>
+    <section id="projetos" aria-labelledby="t-projetos">
+      <h2 id="t-projetos">Aplicações completas</h2>
+      <article class="grande destaque">
+        <div>
+          <h3>Giglio System</h3>
+          <p class="tec">React, Tailwind CSS, Node.js e Express</p>
+          <p>Sistema de RH e departamento pessoal em operação na Giglio Serviços Terceirizados. Substituiu rotinas manuais e planilhas: gestão de colaboradores, sindicatos e jornadas, leitura de espelhos de ponto em PDF e exportação da folha para Excel.</p>
+          <p class="nota">Projeto real de cliente, com repositório privado.</p>
+        </div>
+        <div class="fatos">
+          <p><strong>Em uso no dia a dia</strong> de uma empresa de serviços terceirizados</p>
+          <p><strong>Do zero ao deploy</strong> levantamento com o cliente, front-end, API e banco</p>
+          <p><strong>Conhecimento do negócio</strong> de quem trabalhou cinco anos em departamento pessoal</p>
+        </div>
+      </article>
+      <div id="grandes"></div>
+
+      <h2 class="t-menores">Experimentos de interface</h2>
+      <ul id="menores" class="menores"></ul>
     </section>
 
-    <section id="habilidades">
-      <h2>Habilidades</h2>
-      <div class="colunas">
-        <div><h3>Front-end</h3><p>HTML5 · CSS3 · Flexbox e Grid · Bootstrap · JavaScript (ES6+) · DOM · React · Hooks · styled-components · Vite</p></div>
-        <div><h3>Back-end</h3><p>Node.js · Express · APIs REST · EJS · MySQL · PostgreSQL · MongoDB · Mongoose · Firebase · Integração com IA</p></div>
-        <div><h3>Ferramentas</h3><p>Git e GitHub · GitHub Actions · Vercel · Testes com node:test · Insomnia · VS Code</p></div>
-      </div>
+    <section id="habilidades" class="habilidades" aria-labelledby="t-hab">
+      <h2 id="t-hab">Habilidades</h2>
+      <dl>
+        <dt>Front-end</dt><dd>HTML, CSS, JavaScript, React, Tailwind CSS, Vite e Bootstrap.</dd>
+        <dt>Back-end</dt><dd>Node.js, Express, APIs REST, autenticação JWT, EJS e integração com IA.</dd>
+        <dt>Bancos de dados</dt><dd>PostgreSQL, MySQL, MongoDB, Mongoose e Firebase.</dd>
+        <dt>Ferramentas e testes</dt><dd>Git, GitHub Actions, Docker Compose, Vercel, node:test e Vitest.</dd>
+      </dl>
     </section>
 
-    <section id="contato" class="contato">
-      <h2>Vamos conversar?</h2>
-      <p>Estou aberto a oportunidades como desenvolvedor júnior.</p>
-      <a class="botao" href="https://github.com/LeonardoCarrilho">Falar pelo GitHub</a>
+    <section id="trajetoria" class="habilidades" aria-labelledby="t-traj">
+      <h2 id="t-traj">Trajetória</h2>
+      <dl>
+        <dt>Formação</dt><dd>Bacharelado em Ciência da Computação, Universidade São Judas Tadeu (USJT), concluído em junho de 2026.</dd>
+        <dt>Experiência</dt><dd>Auxiliar de departamento pessoal na Proteção Águia, de janeiro de 2021 a outubro de 2026: admissões, desligamentos, folha de pagamento e obrigações legais.</dd>
+      </dl>
+    </section>
+
+    <section id="contato" class="contato" aria-labelledby="t-contato">
+      <h2 id="t-contato">Procurando um dev júnior? Vamos conversar.</h2>
+      <div class="acoes">
+        <a class="botao" id="link-email" href="mailto:" hidden>Mandar e-mail</a>
+        <a class="botao" id="link-linkedin" href="#" hidden>Ver LinkedIn</a>
+        <a class="botao" href="https://github.com/LeonardoCarrilho">Ver GitHub</a>
+      </div>
     </section>
   </main>
 

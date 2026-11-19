@@ -1,64 +1,73 @@
 const GH = "https://github.com/LeonardoCarrilho/";
 const PAGES = "https://leonardocarrilho.github.io/";
 
-const projetos = [
-  { repo: "loja-fullstack", icone: "🛒", nome: "Loja Full Stack", tipo: "fullstack", vivo: "https://loja-fullstack.vercel.app",
-    descricao: "Cadastro de produtos com front em React e API REST em Express sobre PostgreSQL ou MySQL. Consultas parametrizadas e testes da API.",
-    tags: ["React", "Express", "PostgreSQL"] },
-  { repo: "chatbot-ia", icone: "🤖", nome: "ChatBot com IA", tipo: "fullstack", vivo: "https://chatbot-ia-amber.vercel.app",
+// Contatos: preencha para exibir os botões na seção Contato.
+const CONTATO = { email: "leofernandescarrilho@gmail.com", linkedin: "https://www.linkedin.com/in/leonardo-fernandes-carrilho/" };
+
+const grandes = [
+  { repo: "loja-fullstack", nome: "Loja Full Stack", vivo: "https://loja-fullstack.vercel.app",
+    descricao: "Cadastro de produtos com front em React e API REST em Express sobre PostgreSQL. Consultas parametrizadas e testes da API.",
+    tec: "React, Express e PostgreSQL" },
+  { repo: "chatbot-ia", nome: "ChatBot com IA", vivo: "https://chatbot-ia-amber.vercel.app",
     descricao: "Chat com histórico usando o Gemini. A chave fica só no servidor, com validação e limite de requisições.",
-    tags: ["React", "Node.js", "Gemini"] },
-  { repo: "todolist-mongoose", icone: "✅", nome: "TodoList", tipo: "backend", vivo: "https://todolist-mongoose.vercel.app",
-    descricao: "Listas de tarefas personalizadas por rota dinâmica, com MongoDB e testes em banco em memória.",
-    tags: ["Express", "EJS", "Mongoose"] },
-  { repo: "blog-express", icone: "📝", nome: "Diário do Dev", tipo: "backend", vivo: "https://blog-express-virid.vercel.app",
-    descricao: "Blog renderizado no servidor com URLs amigáveis, validação e proteção contra XSS.",
-    tags: ["Express", "EJS", "MongoDB"] },
-  { repo: "app-pacientes", icone: "🩺", nome: "Cadastro de Pacientes", tipo: "frontend", demo: true,
-    descricao: "CRUD em tempo real com Firebase, formulário validado, busca e máscara de telefone.",
-    tags: ["React", "Bootstrap", "Firebase"] },
-  { repo: "calculadora-react", icone: "🧮", nome: "Calculadora", tipo: "frontend", demo: true,
-    descricao: "Calculadora com lógica em reducer puro coberta por testes e suporte ao teclado.",
-    tags: ["React", "Flexbox"] },
-  { repo: "foguete-orbital", icone: "🚀", nome: "Foguete Orbital", tipo: "frontend", demo: true,
-    descricao: "Jogo de reflexo com física, detecção de colisão e recorde salvo no navegador.",
-    tags: ["JavaScript", "DOM"] },
-  { repo: "qual-e-a-cor", icone: "🎨", nome: "Qual é a cor?", tipo: "frontend", demo: true,
-    descricao: "Gerador de cores CSS em nomes, hexadecimal e RGB, com histórico e cópia.",
-    tags: ["JavaScript", "Bootstrap"] },
-  { repo: "rolou-o-dado", icone: "🎲", nome: "Rolou o Dado", tipo: "frontend", demo: true,
-    descricao: "Jogo de dados para dois jogadores com placar e animação.",
-    tags: ["HTML", "CSS", "JavaScript"] },
+    tec: "React, Node.js e Gemini" },
+  { repo: "todolist-mongoose", nome: "TodoList", vivo: "https://todolist-mongoose.vercel.app",
+    descricao: "Listas de tarefas criadas pela própria URL, com MongoDB e testes em banco em memória.",
+    tec: "Express, EJS e Mongoose" },
+  { repo: "blog-express", nome: "Diário do Dev", vivo: "https://blog-express-virid.vercel.app",
+    descricao: "Blog renderizado no servidor, com URLs amigáveis, validação e proteção contra XSS.",
+    tec: "Express, EJS e MongoDB" },
 ];
 
-const grade = document.querySelector("#grade");
+const menores = [
+  { repo: "app-pacientes", nome: "Cadastro de Pacientes", descricao: "Cadastro em tempo real com Firebase, busca e máscara de telefone." },
+  { repo: "calculadora-react", nome: "Calculadora", descricao: "Lógica em reducer puro, coberta por testes e com suporte ao teclado." },
+  { repo: "foguete-orbital", nome: "Foguete Orbital", descricao: "Jogo de reflexo com física, colisão e recorde salvo no navegador." },
+  { repo: "qual-e-a-cor", nome: "Qual é a cor?", descricao: "Gera cores CSS em nome, hexadecimal e RGB, com histórico e cópia." },
+  { repo: "rolou-o-dado", nome: "Rolou o Dado", descricao: "Jogo de dados para dois jogadores, com placar e animação." },
+];
 
-function render(filtro) {
-  grade.innerHTML = "";
-  projetos
-    .filter((p) => filtro === "todos" || p.tipo === filtro)
-    .forEach((p) => {
-      const card = document.createElement("article");
-      card.className = "card";
-      card.innerHTML = `
-        <div class="icone" aria-hidden="true">${p.icone}</div>
-        <h3>${p.nome}</h3>
-        <p>${p.descricao}</p>
-        <ul class="tags">${p.tags.map((t) => `<li>${t}</li>`).join("")}</ul>
-        <div class="links">
-          <a href="${GH + p.repo}">Código</a>
-          ${p.vivo || p.demo ? `<a href="${p.vivo || PAGES + p.repo + "/"}">Ver ao vivo</a>` : ""}
-        </div>`;
-      grade.append(card);
-    });
+const tela = (url, repo) => `
+  <a class="tela" href="${url}" tabindex="-1" aria-hidden="true">
+    <img src="img/${repo}.png" alt="" loading="lazy" width="1280" height="800">
+  </a>`;
+
+document.querySelector("#grandes").innerHTML = grandes.map((p) => `
+  <article class="grande">
+    <div>
+      <h3>${p.nome}</h3>
+      <p class="tec">${p.tec}</p>
+      <p>${p.descricao}</p>
+      <div class="links">
+        <a class="principal" href="${p.vivo}">Abrir o app</a>
+        <a href="${GH + p.repo}">Ver o código</a>
+      </div>
+    </div>
+    ${tela(p.vivo, p.repo)}
+  </article>`).join("");
+
+document.querySelector("#menores").innerHTML = menores.map((p) => `
+  <li class="menor">
+    ${tela(PAGES + p.repo + "/", p.repo)}
+    <div>
+      <h3>${p.nome}</h3>
+      <p>${p.descricao}</p>
+    </div>
+    <div class="links">
+      <a class="principal" href="${PAGES + p.repo}/">Abrir</a>
+      <a href="${GH + p.repo}">Código</a>
+    </div>
+  </li>`).join("");
+
+if (CONTATO.email) {
+  const a = document.querySelector("#link-email");
+  a.href = "mailto:" + CONTATO.email;
+  a.hidden = false;
+}
+if (CONTATO.linkedin) {
+  const a = document.querySelector("#link-linkedin");
+  a.href = CONTATO.linkedin;
+  a.hidden = false;
 }
 
-document.querySelectorAll("[data-filtro]").forEach((b) =>
-  b.addEventListener("click", () => {
-    document.querySelectorAll("[data-filtro]").forEach((x) => x.classList.toggle("ativo", x === b));
-    render(b.dataset.filtro);
-  })
-);
-
 document.querySelector("#ano").textContent = new Date().getFullYear();
-render("todos");
