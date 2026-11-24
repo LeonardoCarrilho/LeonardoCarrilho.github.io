@@ -2,7 +2,7 @@ const GH = "https://github.com/LeonardoCarrilho/";
 const PAGES = "https://leonardocarrilho.github.io/";
 
 // Contatos: preencha para exibir os botões na seção Contato.
-const CONTATO = { email: "leofernandescarrilho@gmail.com", linkedin: "https://www.linkedin.com/in/leonardo-fernandes-carrilho/" };
+const CONTATO = { email: "leofernandescarrilho@gmail.com", linkedin: "https://www.linkedin.com/in/leonardo-fernandes-carrilho/", whatsapp: "5511916485368" };
 
 const grandes = [
   { repo: "loja-fullstack", nome: "Loja Full Stack", vivo: "https://loja-fullstack.vercel.app",
@@ -62,6 +62,11 @@ document.querySelector("#menores").innerHTML = menores.map((p) => `
 if (CONTATO.email) {
   const a = document.querySelector("#link-email");
   a.href = "mailto:" + CONTATO.email;
+  a.hidden = false;
+}
+if (CONTATO.whatsapp) {
+  const a = document.querySelector("#link-whatsapp");
+  a.href = "https://wa.me/" + CONTATO.whatsapp + "?text=" + encodeURIComponent("Olá, Leonardo! Vi seu portfólio.");
   a.hidden = false;
 }
 if (CONTATO.linkedin) {
